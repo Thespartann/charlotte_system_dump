@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+    <night_iso>6400</night_iso>
+    <night_exposure>12</night_exposure>
+    <night_lumaavg>15</night_lumaavg>
+
+    <ImageRegistrationMethod>1</ImageRegistrationMethod>
+
+    <GhostRemovalMethod>1</GhostRemovalMethod>
+    <LocalMotionDetection>
+        <MotionLowGray>10</MotionLowGray>
+        <MotionHighGray>20</MotionHighGray>
+        <MotionRatio>2.0</MotionRatio>
+    </LocalMotionDetection>
+    <PureColorMotionDetection>
+        <MotionRatio>0.2</MotionRatio>
+    </PureColorMotionDetection>
+    <LocalMotionCorrection>255</LocalMotionCorrection>
+
+    <ImageFusionMethod>1</ImageFusionMethod>
+    <ImageFusion>
+        <MinDarkWeight>-1.0</MinDarkWeight>
+        <MinBrightWeight>-1.0</MinBrightWeight>
+        <MaxBrightWeight>1.0</MaxBrightWeight>
+        <MaxDarkWeight>1.0</MaxDarkWeight>
+        <PyramidTopSize>16</PyramidTopSize>
+        <WeightCalcMethod>1</WeightCalcMethod>
+        <MinUnderExposureDiv>32</MinUnderExposureDiv>
+        <MaxUnderExposureDiv>96</MaxUnderExposureDiv>
+        <MinOverExposureDiv>176</MinOverExposureDiv>
+        <MaxOverExposureDiv>226</MaxOverExposureDiv>
+        <BlendCenter>128</BlendCenter>
+        <BlendSigma>0.25</BlendSigma>
+        <DetailEnhanceRatio>128</DetailEnhanceRatio>
+    </ImageFusion>
+
+    <PostProcessValid>1</PostProcessValid>
+    <PostProcess>
+        <DenoiseDarkThresh>255</DenoiseDarkThresh>
+    </PostProcess>
+
+    <FlashHDR>
+        <PyramidTopSize>16</PyramidTopSize>
+        <WeightCalcMethod>1</WeightCalcMethod>
+        <BlendCenter>128</BlendCenter>
+        <BlendSigma>0.2</BlendSigma>
+        <NoFlashWeight>255</NoFlashWeight>
+    </FlashHDR>
+
+    <Face>
+        <AjustRatio>128</AjustRatio>
+        <Margin>10</Margin>
+        <SmoothRadius>40</SmoothRadius>
+    </Face>
+
+    <PreMotionDetection>
+        <MotionLowGray>10</MotionLowGray>
+        <MotionHighGray>20</MotionHighGray>
+        <MotionRatio>30.0</MotionRatio>
+    </PreMotionDetection>
+
+    <MultiFrameHDR>
+        <MotionLowGray>10</MotionLowGray>
+        <MotionHighGray>20</MotionHighGray>
+        <MotionRatio>5.0</MotionRatio>
+        <PyramidTopSize>8</PyramidTopSize>
+        <BlendCenter>128</BlendCenter>
+        <BlendSigma>0.25</BlendSigma>
+        <DetailEnhanceRatio>128</DetailEnhanceRatio>
+    </MultiFrameHDR>
+	
+	<SeamlessHDR>
+	    <DetailGain>2</DetailGain>
+		<GlobalGain>3</GlobalGain>
+		<SeamlessMinGain>1</SeamlessMinGain>
+		<SeamlessMaxGain>3</SeamlessMaxGain>
+	</SeamlessHDR>
+</Config>

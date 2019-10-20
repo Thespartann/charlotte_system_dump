@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ISP_para_switches name="SWITCHES">
+
+    <total_num>16</total_num>
+        <switches_main0>256    1 1 1 0    0 1 0 0    0 0 0 0   1 1 1</switches_main0>
+        <switches_aux0>256    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux0>
+        <switches_main1>512    1 1 1 0    0 1 0 0    0 0 0 0   1 1 1</switches_main1>
+        <switches_aux1>512    0 0 0 0    0 0 0 0    0 0 0 0   1 1 0</switches_aux1>
+        <switches_main2>768    1 1 1 0    0 1 0 0    0 0 0 0   1 1 1</switches_main2>
+        <switches_aux2>768    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux2>
+        <switches_main3>1024    1 1 1 0    0 1 0 0    0 0 0 0   1 1 1</switches_main3>
+        <switches_aux3>1024    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux3>
+        <switches_main4>1280    1 1 1 0    0 1 0 0    0 0 0 0   1 1 1</switches_main4>
+        <switches_aux4>1280    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux4>
+        <switches_main5>1536    1 1 1 0    0 1 0 0    0 0 0 0   1 1 1</switches_main5>
+        <switches_aux5>1536    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux5>
+        <switches_main6>2048    1 1 1 0    0 1 0 0    0 0 0 0   1 1 1</switches_main6>
+        <switches_aux6>2048     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux6>
+        <switches_main7>2560    1 1 1 0    0 1 0 0    0 0 0 0   1 1 1</switches_main7>
+        <switches_aux7>2560     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux7>
+        <switches_main8>3072    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_main8>
+        <switches_aux8>3072     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux8>
+        <switches_main9>3584    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_main9>
+        <switches_aux9>3584     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux9>
+        <switches_main10>4608    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_main10>
+        <switches_aux10>4608     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux10>
+        <switches_main11>6144    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_main11>
+        <switches_aux11>6144     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux11>
+        <switches_main12>7168    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_main12>
+        <switches_aux12>7168     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux12>
+        <switches_main13>8192    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_main13>
+        <switches_aux13>8192     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux13>
+        <switches_main14>12288    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_main14>
+        <switches_aux14>12288     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux14>
+        <switches_main15>16384    0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_main15>
+        <switches_aux15>16384     0 0 0 0    0 0 0 0    0 0 0 0   0 0 0</switches_aux15>
+</ISP_para_switches>

@@ -1,0 +1,43 @@
+on post-fs-data
+    # AR0009EHNV Added by s00903035 20170809 begin
+    #Create directory for OtaSave
+    mkdir /data/OtaSave 0770 system system
+
+    # DTS2016062104837 zhangxinsheng 00221699 20160711
+    mkdir /data/cota
+    chmod 0775 /data/cota
+    chown system system /data/cota
+    restorecon_recursive /data/cota
+
+    mkdir /data/cota/cloud
+    chmod 0770 /data/cota/cloud
+    chown system system /data/cota/cloud
+    restorecon_recursive /data/cota/cloud
+	
+	#Create directory for cache/fotapkg
+    mkdir /cache/fotapkg 0771 system system
+
+on property:ro.runmode=factory
+    chmod 0664 /dev/block/sdc
+    chown root system /dev/block/sdc
+    chmod 0775 /data/media/0/Music
+    chmod 0775 /data/media/0/Pictures
+    chown media_rw media_rw /data/media/0
+    chown media_rw media_rw /data/media/0/Music
+    chown media_rw media_rw /data/media/0/Pictures
+
+on property:sys.mount_patch=true
+    umount /patch_hw
+    remove_dm_device patch_hw
+    mkdir patch_hw
+    mount ext4 /dev/block/bootdevice/by-name/patch /patch_hw wait ro
+    mount erofs /dev/block/bootdevice/by-name/patch /patch_hw wait ro
+    setprop sys.mount_patch false
+
+on property:sys.boot_completed=1 && property:ro.user_hota_update=1
+    #update user hota update state in oeminfo,  and enture oeminfo_nvm has been working already
+    # 1: hota first boot start
+    # 0: hota first boot end
+    write /dev/kmsg " user_hota_update_oem first boot end++"
+    user_hota_update_oem 0
+    write /dev/kmsg " user_hota_update_oem first boot end--"

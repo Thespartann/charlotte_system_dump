@@ -1,0 +1,8 @@
+#!/system/bin/sh
+
+#--------------------main-----------------
+#adb shell am startservice -n com.huawei.lbs/.HwLBSService 
+
+am startservice -n com.huawei.lbs/.HwLBSService
+
+exit

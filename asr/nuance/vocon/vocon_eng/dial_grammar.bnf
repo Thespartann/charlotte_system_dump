@@ -1,0 +1,89 @@
+#BNF+EMV2.1;
+!grammar dial_grammar;
+!start <Wakeup>;
+!start <Dial>;
+!start <Dial_Special_Num>;
+!start <Contact>;
+!start <Dial_Confirm>;
+!start <Answer_Confirm>;
+!start <Hang_Up>;
+!start <Select_Num>;
+!start <Open_Google_Now>;
+!start <Find_Phone>;
+!slot <wakeup_word>;
+!slot <contacts>;
+
+<Wakeup>:<wakeup_word>;
+<Dial>:[<Wakeup>]<W_Dial>;
+<Dial_Special_Num>:[<Wakeup>]<W_Dial_Special_Num>;
+<Contact>:[<Wakeup>]<W_Contact>;
+<Dial_Confirm>:[<Wakeup>]<W_Dial_Confirm>;
+<Hang_Up>:[<Wakeup>]<W_Hang_Up>;
+<Answer_Confirm>:[<Wakeup>]<W_Answer_Confirm>;
+<Select_Num>:[<Wakeup>]<W_Select_Num>;
+<Open_Google_Now>:[<Wakeup>]<W_Open_Google_Now>;
+<Find_Phone>:[<Wakeup>]<W_Find_Phone>;
+
+<W_Dial>:<W_Dial_1>|<W_Dial_2>;
+<W_Dial_1>:<Dial_Action_1> [<contacts> [[at | at his | at her] <Number_Type>]] [phone] [number] |
+          <Dial_Action_1> <contacts> 's [<Number_Type>] number;
+<W_Dial_2>:<Dial_Action_2>;
+<W_Dial_Special_Num>:<Dial_Action_1> <Special_Num>;
+<W_Hang_Up>: <Reject>;
+<W_Contact>:<contacts>;
+<W_Dial_Confirm>:<Ok> | <Cancel>;
+<W_Answer_Confirm>:<Answer> | <Reject>;
+<W_Select_Num>:<Select_1> | <Select_2> | <Select_3> | <Select_4> | <Select_5> | <Select_6>;
+<W_Open_Google_Now>:open google now;
+<W_Find_Phone>:where are you;
+
+<Dial_Action_1> : [make a] [phone] call | dial | phone [to];
+<Dial_Action_2> : redial [[the] last [one | number]] | call back |  (call | dial) again | (call | dial) [the] last (one | number);
+<Number_Type> : !tag(Number_Type_TAG,   
+                  home   !id(1) |
+                  office  !id(2) |
+                  work  !id(2) |
+                  business !id(2) |
+                  company  !id(2) |
+                  mobile   !id(3) |
+                  cell  !id(3)
+                  );
+<Special_Num> : !tag(Special_Num,
+					9 1 1
+					);
+<Ok> : !tag(Ok,
+			call
+			);
+<Cancel> : !tag(Cancel,
+				cancel
+				);
+<Answer> : !tag(Answer,
+			answer
+			);
+<Reject> : !tag(Reject,
+				reject
+				);
+<Select_1> : !tag(Select_1,
+				 ([the] first [one])|
+				 "Number one"
+				);
+<Select_2> : !tag(Select_2,
+				 ([the] second [one]) |
+				 "Number two"
+				);
+<Select_3> : !tag(Select_3,
+				 ([the] third [one]) |
+				 "Number three"
+				);
+<Select_4> : !tag(Select_4,
+				 ([the] fourth [one]) |
+				 "Number four"
+				);
+<Select_5> : !tag(Select_5,
+				 ([the] fifth [one]) |
+				 "Number five"
+				);
+<Select_6> : !tag(Select_6,
+				 ([the] sixth [one]) |
+				 "Number six"
+				);

@@ -1,0 +1,104 @@
+#BNF+EMV2.1;
+!grammar dial_grammar;
+!start <Wakeup>;
+!start <Dial>;
+!start <Dial_Special_Num>;
+!start <Contact>;
+!start <Dial_Confirm>;
+!start <Answer_Confirm>;
+!start <Hang_Up>;
+!start <Select_Num>;
+!start <Open_Google_Now>;
+!start <Find_Phone>;
+!slot <wakeup_word>;
+!slot <contacts>;
+
+<Wakeup>:<wakeup_word>;
+<Dial>:[<Wakeup>]<W_Dial>;
+<Dial_Special_Num>:[<Wakeup>]<W_Dial_Special_Num>;
+<Contact>:[<Wakeup>]<W_Contact>;
+<Dial_Confirm>:[<Wakeup>]<W_Dial_Confirm>;
+<Answer_Confirm>:[<Wakeup>]<W_Answer_Confirm>;
+<Hang_Up>:[<Wakeup>]<W_Hang_Up>;
+<Select_Num>:[<Wakeup>]<W_Select_Num>;
+<Open_Google_Now>:[<Wakeup>]<W_Open_Google_Now>;
+<Find_Phone>:[<Wakeup>]<W_Find_Phone>;
+
+<W_Dial>:<W_Dial_1>|<W_Dial_2>;
+<W_Dial_1>:<Dial_Action_1> [a] <contacts> | 
+            <Dial_Action_1> [il] <at_Number_Type> di <contacts> | 
+            <Dial_Action_1> il (numero | numero di telefono | telefono) di <of_Number_Type> di <contacts> | 
+            <Dial_Action_1> a <contacts> <at2_Number_Type> | 
+            <Dial_Action_1> (al | al suo) (numero | numero di telefono | telefono) <of_Number_Type>;
+<W_Dial_2>:<Dial_Action_2>;
+<W_Dial_Special_Num>:<Dial_Action_1> <Special_Num>;
+<W_Contact>:<contacts>;
+<W_Dial_Confirm>:<Ok> | <Cancel>;
+<W_Answer_Confirm>:<Answer> | <Reject>;
+<W_Hang_Up>: <Reject>;
+<W_Select_Num>:<Select_1> | <Select_2> | <Select_3> | <Select_4> | <Select_5> | <Select_6>;
+<W_Open_Google_Now>:(aprire | apri | iniziare | inizia | lanciare | lancia) google now;
+<W_Find_Phone>:dove (sei | stai );
+
+<Dial_Action_1> : chiama | chiamare | telefona | telefonare | fare una telefonata | fare una chiamata;
+<Dial_Action_2> : richiama | richiamare | ritelefona | ritelefonare;
+<Number_Type> : !tag(Number_Type_TAG,   
+                  "casa"   !id(1) |
+                  "ufficio"  !id(2) |
+                  "lavoro"  !id(2) |
+                  "cellulare"   !id(3)
+                  );
+<of_Number_Type> : !tag(Number_Type_TAG,   
+                    di casa   !id(1) |
+                    di ufficio   !id(2) |
+                    dell'ufficio  !id(2) |
+                     d'ufficio  !id(2) |
+                    del lavoro  !id(2) |
+                    (del | di) cellulare   !id(3)
+                    );
+<at_Number_Type> : !tag(Number_Type_TAG,   
+                    a casa   !id(1) |
+                    all'ufficio   !id(2) |
+                    in ufficio  !id(2) |
+                    al lavoro  !id(2) |
+                    al cellulare   !id(3)
+                    );
+<at2_Number_Type> : !tag(Number_Type_TAG,   
+                    a casa sua  !id(1) |
+                    al suo ufficio  !id(2) |
+                    al lavoro  !id(2) |
+                    al suo cellulare   !id(3)
+                    );                      
+<Special_Num> : !tag(Special_Num,
+					1 1 2 | 1 1 3 |1 1 8 |  1 1 5 | 1 5 1 5 | 1 1 7 | 1 5 3 0 | 9 1 1 | 114 
+					);
+<Ok> : !tag(Ok,
+			ok | chiama | chiamare | telefona | telefonare
+			);
+<Cancel> : !tag(Cancel,
+				cancella | cancella la chiamata | annullare | annullare la chiamata
+				);
+<Answer> : !tag(Answer,
+			(rispondi | rispondere) [(la | alla) chiamata] 
+			);
+<Reject> : !tag(Reject,
+				(rifiuta | rifiutare) [(la | alla) chiamata] 
+				);
+<Select_1> : !tag(Select_1,
+				 ([la] prima | [il] primo) | [il | la] numero uno
+				);
+<Select_2> : !tag(Select_2,
+				 ([la] seconda | [il] secondo) | [il | la] numero due
+				);
+<Select_3> : !tag(Select_3,
+				 ([la] terza | [il] terzo) |[il | la] numero tre
+				);
+<Select_4> : !tag(Select_4,
+				 ([la] quarta | [il] quarto) | [il | la] numero quattro
+				);
+<Select_5> : !tag(Select_5,
+				 ([la] quinta | [il] quinto) | [il | la] numero cinque
+				);
+<Select_6> : !tag(Select_6,
+				 ([la] sesta | [il] sesto) | [il | la] numero sei
+				);

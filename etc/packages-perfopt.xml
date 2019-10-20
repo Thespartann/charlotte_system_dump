@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<perf-opt>
+    <opt_type name="decodebitmap" typeid="1">
+        <pkg name="com.tencent.mm" />
+        <pkg name="com.tencent.mobileqq" />
+        <pkg name="com.taobao.taobao" />
+        <pkg name="com.eg.android.AlipayGphone" />
+        <pkg name="com.qiyi.video" />
+        <pkg name="com.tencent.mtt" />
+        <pkg name="com.tencent.qqlive" />
+        <pkg name="com.autonavi.minimap" />
+        <pkg name="com.qiyi.video" />
+        <pkg name="com.sankuai.meituan" />
+        <pkg name="com.baidu.BaiduMap" />
+        <pkg name="com.sina.weibo" />
+        <pkg name="com.sdu.didi.psngerp" />
+        <pkg name="com.jingdong.app.mall" />
+        <pkg name="com.mt.mtxx.mtxx" />
+        <pkg name="com.dianping.v1" />
+        <pkg name="ctrip.android.view" />
+        <pkg name="com.happyelements.AndroidAnimal" />
+        <pkg name="com.tmall.wireless" />
+        <pkg name="com.netease.newsreader.activity" />
+    </opt_type>
+</perf-opt>

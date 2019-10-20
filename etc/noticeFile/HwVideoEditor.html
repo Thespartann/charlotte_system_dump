@@ -1,0 +1,1484 @@
+<html><head>
+
+<p class=MsoNormal><span lang=EN-US>This document contains an open source software notice for this product. The open source software licenses are granted by the respective right holders. And the open source licenses prevails all other license information with regard to the respective open source software contained in the product.</span></p>
+
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>Warranty Disclaimer</span></b></p>
+
+
+<p class=MsoNormal><b><span lang=EN-US style='text-transform:uppercase'>The open source software in this product is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the applicable licenses for more details.</span></b></p>
+
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>Copyright Notice and License Texts</span></b></p>
+
+
+<style type="text/css">
+body { padding: 0; font-family: sans-serif; }
+.same-license { background-color: #eeeeee; border-top: 20px solid white; padding: 10px; }
+.label { font-weight: bold; }
+.file-list { margin-left: 1em; color: blue; }
+</style>
+
+</head><body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+<div class="toc">
+<ul>
+<li><a href="#id0">/ExoPlayer</a></li>
+<li><a href="#id1">/ffmpeg</a></li>
+</ul>
+</div><!-- table of contents -->
+<table cellpadding="0" cellspacing="0" border="0">
+<tr id="id0"><td class="same-license">
+<div class="label">Notices for Software(s):</div>
+<div class="file-list">
+/ExoPlayer <br/>
+</div><!-- file-list -->
+
+<pre class="license-text">
+Copyright (C) 2014 The Android Open Source Project
+Copyright (C) 2015 The Android Open Source Project
+
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      &quot;License&quot; shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      &quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      &quot;Legal Entity&quot; shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      &quot;control&quot; means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      &quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      &quot;Source&quot; form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      &quot;Object&quot; form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      &quot;Work&quot; shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      &quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      &quot;Contribution&quot; shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as &quot;Not a Contribution.&quot;
+
+      &quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non&ndash;exclusive, no&ndash;charge, royalty&ndash;free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non&ndash;exclusive, no&ndash;charge, royalty&ndash;free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross&ndash;claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third&ndash;party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON&ndash;INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets &quot;[]&quot;
+      replaced with your own identifying information. (Don&prime;t include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same &quot;printed page&quot; as the copyright notice for easier
+      identification within third&ndash;party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE&ndash;2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</pre><!-- license-text -->
+</td></tr><!-- same-license -->
+
+
+
+<tr id="id1"><td class="same-license">
+<div class="label">Notices for Software(s):</div>
+<div class="file-list">
+/ffmpeg <br/>
+</div><!-- file-list -->
+
+<pre class="license-text">
+Copyright (c) 2000, 2001, 2002 Fabrice Bellard
+copyright (c) 2013 Andrew Kelley
+Copyright (c) 2010 Nicolas George
+Copyright (c) 2011 Stefano Sabatini
+Copyright (c) 2012 Clément Bœsch
+Copyright (c) 2013 Stefano Sabatini
+Copyright (c) 2014 Stefano Sabatini
+Copyright (c) 2012 Stefano Sabatini
+Copyright (c) 2014 Clément Bœsch
+Copyright (c) 2001 Fabrice Bellard
+Copyright (c) 2015 Anton Khirnov
+Copyright (c) 2003 Fabrice Bellard
+Copyright (c) 2011 Reinhard Tartler
+Copyright (c) 2014 Andrey Utkin
+Copyright (c) 2014 Lukasz Marek
+Copyright (c) 2015 Stephan Holljes
+Copyright (c) 2012 MIPS Technologies, Inc., California.
+Author:  Author Name (author_name@@mips.com)
+Copyright (c) 2012 Anton Khirnov
+Copyright 2011&ndash;2014 Twitter, Inc.
+Copyright (c) 2013&ndash;2014 Ramiro Polla, Luca Barbato, Deti Fliegl
+Copyright (c) 2009 Samalyse
+Copyright (c) 2009 Michael Niedermayer
+Author: Olivier Guilyardi &lt;olivier samalyse com&gt;
+Copyright (C) 2013 Calvin Walton &lt;calvin.walton@kepstin.ca&gt;
+Copyright (C) 2007&ndash;2010 Christophe Gisquet &lt;word1.word2@gmail.com&gt;
+Copyright (c) 2010 Ramiro Polla
+Copyright (c) 2013 Lukasz Marek
+Copyright (c) 2009 Giliard B. de Freitas &lt;giliarde@gmail.com&gt;
+Copyright (C) 2002 Gunnar Monell &lt;gmo@linux.nu&gt;
+Copyright (c) 2000, 2001 Fabrice Bellard
+Copyright (C)2001 Daniel Maas &lt;dmaas@dcine.com&gt;
+receive, proc_fs by Dan Dennedy &lt;dan@dennedy.org&gt;
+Copyright (C)1999,2000 Sebastien Rougeaux &lt;sebastien.rougeaux@anu.edu.au&gt;
+Peter Schlaile &lt;udbz@rz.uni&ndash;karlsruhe.de&gt;
+Copyright (c) 2010 Jacob Meuser
+Copyright (c) 2007 Luca Abeni ( lucabe72 email it )
+Copyright (c) 2007 Benoit Fouet ( benoit fouet free fr )
+Copyright (c) 2011 Anton Khirnov &lt;anton@khirnov.net&gt;
+Copyright (c) 2013 Jeff Moguillansky
+Copyright (c) 2011 Jonathan Baldwin
+Copyright (c) 2000,2001 Fabrice Bellard
+Copyright (c) 2011 Luca Barbato &lt;lu_zero@gentoo.org&gt;
+Copyright (c) 2004 Roman Shaposhnik
+Copyright (c) 2008 Alessandro Sappia
+Copyright (c) 2013&ndash;2014 Ramiro Polla
+Copyright (c) 2006 Luca Abeni
+Copyright (c) 2003 Max Krasnyansky &lt;maxk@qualcomm.com&gt;
+Copyright (c) 2002 Steve O&prime;Hara&ndash;Smith
+simple_grab.c Copyright (c) 1999 Roger Hardiman
+Copyright (c) 2013 Lukasz Marek &lt;lukasz.m.luki@gmail.com&gt;
+Copyright 2004&ndash;2006 Lennart Poettering
+Copyright (c) 2014 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2014 Luca Barbato &lt;lu_zero@gentoo.org&gt;
+Copyright (c) 2006&ndash;2008 Ramiro Polla
+Copyright (c) 2012 Paul B Mahol
+Copyright (c) 2013 Clément Bœsch
+Copyright (c) 2014 Deti Fliegl
+Copyright (c) 2015 Roger Pack
+Copyright (c) 2013&ndash;2014 Luca Barbato, Deti Fliegl
+Copyright (c) 2012 Georg Lippitsch &lt;georg.lippitsch@gmx.at&gt;
+Copyright (c) 2016 Josh de Kock
+Copyright (c) 2000&ndash;2003 Fabrice Bellard
+Copyright (c) 2012 Ronald S. Bultje &lt;rsbultje@gmail.com&gt;
+Copyright 2003 Kevin Atkinson
+Copyright (C) 2010&ndash;2011 x264 project
+Authors: Steven Walters &lt;kemuri9@gmail.com&gt;
+Copyright (c) 2012 Derek Buitenhuis
+Copyright (c) 2010&ndash;2016 NVIDIA Corporation
+Copyright (c) 2016 Copyright (c) 2010&ndash;2015 NVIDIA Corporation
+Copyright (c) 2011 KO Myung&ndash;Hun &lt;komh@chollian.net&gt;
+Copyright (C) 2013 Lenny Wang
+Copyright (C) 2001&ndash;2003 Michael Niedermayer (michaelni@gmx.at)
+AltiVec optimizations (C) 2004 Romain Dolbeau &lt;romain@dolbeau.org&gt;
+based on code by Copyright (C) 2001&ndash;2003 Michael Niedermayer (michaelni@gmx.at)
+Copyright (C) 2001&ndash;2002 Michael Niedermayer (michaelni@gmx.at)
+Copyright (c) 2004&ndash;2012 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2006 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2011&ndash;2013 Michael Niedermayer (michaelni@gmx.at)
+Copyright (C) 2011&ndash;2012 Michael Niedermayer (michaelni@gmx.at)
+Copyright (c) 2013 Martin Storsjo
+Copyright (c) 2014 Luca Barbato &lt;lu_zero@gentoo.org&gt;
+Copyright (c) 2012 Rob Sykes &lt;robs@users.sourceforge.net&gt;
+Copyright (C) 2012 Michael Niedermayer (michaelni@gmx.at)
+Copyright (c) 2008 Peter Ross
+bessel function: Copyright (c) 2006 Xiaogang Zhang
+Copyright (C) 2012&ndash;2013 Michael Niedermayer (michaelni@gmx.at)
+Copyright (c) 2002 Fabrice Bellard
+Copyright (c) 2011 Anton Khirnov
+copyright (c) 2009 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2012 Martin Storsjo
+Copyright (C) 2014 Red Hat, Inc.
+Authors: Markus Armbruster &lt;armbru@redhat.com&gt;
+Paolo Bonzini &lt;pbonzini@redhat.com&gt;
+Copyright (c) 2008&ndash;2010 Stefano Sabatini
+Copyright (c) 2007 Michael Niedermayer
+by Mike Melanson (melanson@pcisys.net)
+Copyright (c) 2005 Francois Revol
+Copyright (c) 2014 Martin Storsjo
+Copyright (c) 2013 Nicolas George
+Copyright (c) 2013 Michael Niedermayer
+Copyright (c) 2013 James Almer
+Copyright (c) 2011&ndash;2014 Peter Ross &lt;pross@xvid.org&gt;
+Copyright (C) 2001&ndash;2011 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2001&ndash;2003 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Written by Nick Kurshev.
+palette &amp; YUV &amp; runtime CPU stuff by Michael (michaelni@gmx.at)
+Copyright (C) 2013 Xiaolei Yu &lt;dreifachstein@gmail.com&gt;
+Copyright (C) 2015 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+YUV &amp; runtime CPU stuff by Michael (michaelni@gmx.at)
+Copyright (C) 2015 Pedro Arthur &lt;bygrandao@gmail.com&gt;
+Copyright (C) 2001&ndash;2012 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2009 Konstantin Shishkov
+by Michael Niedermayer (michaelni@gmx.at)
+Copyright (C) 2001&ndash;2007 Michael Niedermayer
+(c) 2010 Konstantin Shishkov
+Copyright (C) 2002 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2003&ndash;2011 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2017 Clément Bœsch &lt;u pkh me&gt;
+Copyright (C) 2004 Romain Dolbeau &lt;romain@dolbeau.org&gt;
+copyright (C) 2004 Marc Hoffman &lt;marc.hoffman@analog.com&gt;
+Copyright (c) 2016 Neil Birkbeck &lt;neil.birkbeck@gmail.com&gt;
+Copyright (c) 2003 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2015 Eran Kornblau &lt;erankor at gmail dot com&gt;
+Copyright (C) 2007 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+based on public domain SHA&ndash;1 code by Steve Reid &lt;steve@edmweb.com&gt;
+and on BSD&ndash;licensed SHA&ndash;2 code by Aaron D. Gifford
+Copyright (C) 2013 James Almer
+Copyright (c) 2016 Umair Khan &lt;omerjerk@gmail.com&gt;
+copyright (c) 2012 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2009 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2012 Peng  Gao     &lt;peng@multicorewareinc.com&gt;
+Copyright (C) 2012 Li    Cao     &lt;li@multicorewareinc.com&gt;
+Copyright (C) 2012 Wei   Gao     &lt;weigao@multicorewareinc.com&gt;
+Copyright (C) 2013 Lenny Wang    &lt;lwanghpc@gmail.com&gt;
+Copyright (c) 2009 Mans Rullgard &lt;mans@mansr.com&gt;
+Copyright (c) 2014 Supraja Meedinti
+copyright (c) 2006 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2012 Samuel Pitoiset
+Copyright 2005 Balatoni Denes
+Copyright 2006 Loren Merritt
+Copyright (c) 2015 Vesselin Bontchev
+Copyright (c) 2011 Mans Rullgard
+Copyright (c) 2003&ndash;2012 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2012 Justin Ruggles &lt;justin.ruggles@gmail.com&gt;
+Copyright (c) 2009 Baptiste Coudurier &lt;baptiste.coudurier@gmail.com&gt;
+copyright (c) 2006 Mans Rullgard
+Copyright (c) 2005&ndash;2012 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2013 Reimar Döffinger &lt;Reimar.Doeffinger@gmx.de&gt;
+Copyright (C) 2007 Marc Hoffman
+Copyright (c) 2007 Mans Rullgard
+erf function: Copyright (c) 2006 John Maddock
+copyright (c) 2009 Michael Niedermayer
+Copyright (c) 2014 Tim Walker &lt;tdskywalker@gmail.com&gt;
+Copyright (c) 2014 Vittorio Giovara &lt;vittorio.giovara@gmail.com&gt;
+Copyright (c) 2015 Supraja Meedinti
+Copyright (c) 2006 Smartjog S.A.S, Baptiste Coudurier &lt;baptiste.coudurier@gmail.com&gt;
+Copyright (c) 2011&ndash;2012 Smartjog S.A.S, Clément Bœsch &lt;clement.boesch@smartjog.com&gt;
+copyright (c) 2007 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2014 Nicolas George
+Copyright (c) 2008 Mans Rullgard &lt;mans@mansr.com&gt;
+Copyright (c) 2008 Siarhei Siamashka &lt;ssvb@users.sourceforge.net&gt;
+Copyright (c) 2008 Ramiro Polla &lt;ramiro.polla@gmail.com&gt;
+Copyright (c) 2010 Mans Rullgard &lt;mans@mansr.com&gt;
+Copyright (c) 2008 Michael Niedermayer
+Copyright (c) 2016 Vittorio Giovara &lt;vittorio.giovara@gmail.com&gt;
+Copyright (c) 2013 Vittorio Giovara &lt;vittorio.giovara@gmail.com&gt;
+Copyright (c) 2012 Nicolas George
+copyright (c) 2005&ndash;2012 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2002&ndash;2006 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2006 Oded Shimon &lt;ods15@ods15.dyndns.org&gt;
+Copyright (c) 2015 Kevin Wheatley &lt;kevin.j.wheatley@gmail.com&gt;
+Copyright (c) 2015 Imagination Technologies Ltd
+Author:  Branimir Vasic (bvasic@mips.com)
+Author:  Zoran Lukic (zoranl@mips.com)
+Copyright (c) 2015 Manojkumar Bhosale (Manojkumar.Bhosale@imgtec.com)
+Author:  Nedeljko Babic (nbabic@mips.com)
+Copyright (c) 2016 Loongson Technology Corporation Limited
+Copyright (c) 2016 Zhou Xiaoyong &lt;zhouxiaoyong@loongson.cn&gt;
+Copyright (c) 2001, 2002, 2003 Fabrice Bellard
+Copyright (C) 2013 James Almer &lt;jamrial@gmail.com&gt;
+Copyright (c) 2002 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+copyright (c) 2005 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2006 Reimar Doeffinger
+Copyright (C) 2012 Martin Storsjo
+Copyright (c) 2002&ndash;2004 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2003 Michel Bardiaux
+Copyright (C) 2006 Michael Niedermayer (michaelni@gmx.at)
+Copyright (C) 2003&ndash;2005 by Christopher R. Hertel (crh@ubiqx.mn.org)
+from Christopher R. Hertel (crh@ubiqx.mn.org)
+Copyright (C) 1995 Mark Adler
+Author:  Nedeljko Babic (nedeljko.babic imgtec com)
+Copyright (c) 2004 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+copyright (c) 2006 Reimar Doeffinger
+Copyright (C) 2012 Peng Gao &lt;peng@multicorewareinc.com&gt;
+Copyright (C) 2012 Li   Cao &lt;li@multicorewareinc.com&gt;
+Copyright (C) 2012 Wei  Gao &lt;weigao@multicorewareinc.com&gt;
+Copyright (c) 2013 Loren Merritt
+(c)1997&ndash;99 by H. Dietz and R. Fisher
+Copyright (c) 2015 James Almer
+Copyright (c) 2010 Alexander Strange &lt;astrange@ithinksw.com&gt;
+copyright (c) 2016 Ganesh Ajjanagadde &lt;gajjanag@gmail.com&gt;
+copyright (c) 2010 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2006 Ryan Martell. (rdm4@martellventures.com)
+Copyright (c) 2015 Janne Grunau &lt;janne&ndash;libav@jannau.net&gt;
+Copyright (c) 2007 Reimar Doeffinger
+Copyright (c) 2006 Roman Shaposhnik
+Author:  Stanislav Ocovaj (stanislav.ocovaj imgtec com)
+Copyright (c) 2005 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+copyright (c) 2003 Fabrice Bellard
+copyright (c) 2015 Rodger Combs &lt;rodger.combs@gmail.com&gt;
+Copyright (c) 2006 Luca Barbato &lt;lu_zero@gentoo.org&gt;
+Copyright (c) 2006 Guillaume Poirier &lt;gpoirier@mplayerhq.hu&gt;
+Copyright (c) 2005 Luca Barbato &lt;lu_zero@gentoo.org&gt;
+Copyright (c) 2015 Luca Barbato &lt;lu_zero@gentoo.org&gt;
+Copyright (c) 2014 StarBrilliant &lt;m13253@hotmail.com&gt;
+Copyright (c) 2015 Paul B Mahol
+Copyright (c) 2009 Baptiste Coudurier &lt;baptiste dot coudurier at gmail dot com&gt;
+Copyright (c) 2015 Mats Peterson
+Copyright (c) 2007, 2008 Ivo van Poorten
+Copyright (c) 2017 Paul B Mahol
+Copyright (c) 2010&ndash;2011 Peter Ross &lt;pross@xvid.org&gt;
+copyright (c) 2000 Fabrice Bellard
+Copyright (c) 2015 Rodger Combs
+Copyright (c) 2007 Justin Ruggles &lt;justin.ruggles@gmail.com&gt;
+Copyright (c) 2009 Daniel Verkamp &lt;daniel at drv.nu&gt;
+Copyright (c) 2006 SmartJog S.A., Baptiste Coudurier &lt;baptiste dot coudurier at smartjog dot com&gt;
+Copyright (c) 2010 Rafael Carre
+Copyright (c) 2008 Baptiste Coudurier &lt;baptiste.coudurier@gmail.com&gt;
+Copyright (c) 2009 Reimar Döffinger &lt;Reimar.Doeffinger@gmx.de&gt;
+Copyright (c) 2010 Josh Allmann
+Copyright (c) 2009 Konstantin Shishkov
+Copyright (c) 2006&ndash;2009 Justin Ruggles
+Copyright (c) 2016 Thomas Volkert &lt;thomas@netzeal.de&gt;
+Copyright (c) 2009 Toshimitsu Kimura
+based on libavformat/http.c, Copyright (c) 2000, 2001 Fabrice Bellard
+Copyright (c) 2011 Martin Storsjo
+Copyright (c) 2009 Michael Tison
+Copyright (c) 2014 Peter Ross
+Copyright (c) 2010  Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 2012  Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2005 Reimar Döffinger
+Copyright (c) 2008 Jaikrishnan Menon &lt;realityman@gmx.net&gt;
+Copyright (c) 2010 Peter Ross &lt;pross@xvid.org&gt;
+Copyright (c) 2010 Sebastian Vater &lt;cdgs.basty@googlemail.com&gt;
+Copyright (c) 2009 Daniel Verkamp
+Copyright (c) 2008 Baptiste Coudurier &lt;baptiste dot coudurier at gmail dot com&gt;
+Copyright (c) 2009 Reimar Döffinger, based on crcenc (c) 2002 Fabrice Bellard
+Copyright (C) 2015 Rostislav Pehlivanov &lt;atomnuker gmail com&gt;
+Copyright (C) 2015 Vittorio Giovara &lt;vittorio.giovara gmail com&gt;
+Copyright (c) 2007 Christian Ohm, 2008 Eli Friedman
+Copyright (c) 2015 Gilles Chanteperdrix &lt;gch@xenomai.org&gt;
+Copyright (c) 2006  Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 2016 Google Inc.
+Copyright (c) 2016 KongQun Yang (kqyang@google.com)
+Copyright (c) 2012 Vitaliy E Sugrobov
+copyright (c) 2002 Fabrice Bellard
+copyright (c) 2014 Samsung Electronics. All rights reserved.
+@Author: Reynaldo H. Verdejo Pinochet &lt;r.verdejo@sisa.samsung.com&gt;
+Copyright (c) 2003 Roman Shaposhnik
+Many thanks to Dan Dennedy &lt;dan@dennedy.org&gt; for providing wealth
+Copyright (c) 2006 Daniel Maas &lt;dmaas@maasdigital.com&gt;
+Copyright (c) 2009 Daniel Verkamp &lt;daniel@drv.nu&gt;
+Copyright (c) 2008 robs@users.sourceforge.net
+Copyright (c) 2001 FFmpeg project
+Copyright (c) 2009 Luca Abeni
+Copyright (c) 2009 Martin Storsjo
+Copyright (c) 2007 Konstantin Shishkov
+copyright (c) 2001 Fabrice Bellard
+Copyright (c) 2010 Anton Khirnov
+Copyright (c) 2010 Anatoly Nenashev
+Copyright (c) 2011 Nicolas George
+Copyright (c) 2005 Alex Beregszaszi
+Copyright (c) 2012  Nicolas George &lt;nicolas.george@normalesup.org&gt;
+Copyright (c) 2015 Zhang Rui &lt;bbcallen@gmail.com&gt;
+Copyright (c) 2003 The FFmpeg project
+Copyright (c) 2007 Peter Ross
+Copyright (c) 2006  Patrick Guimond
+Copyright (c) 2016 Paul B Mahol
+Copyright (C) 2010 David Conrad
+Copyright (c) 2007 Benjamin Zores &lt;ben@geexbox.org&gt;
+Copyright (C) 2007  Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 2000 Fabrice Bellard
+Copyright (c) 2004 Michael Niedermayer
+Copyright (c) 2006 The FFmpeg Project
+Copyright (c) 2008 Sascha Sommer (saschasommer@freenet.de)
+Copyright (c) 2007 Marco Gerards &lt;marco@gnu.org&gt;
+Copyright (c) 2003 Thomas Raivio
+Copyright (c) 2004 Gildas Bazin &lt;gbazin at videolan dot org&gt;
+Copyright (c) 2013 Luca Barbato
+Copyright (c) 2008 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2008 Sisir Koppaka
+Copyright (c) 2009  Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 2010 Martin Storsjo
+Copyright (c) 2008&ndash;2010 Peter Ross (pross@xvid.org)
+Copyright (c) 2009 Daniel Verkamp (daniel@drv.nu)
+Copyright (c) 2010 David Conrad
+Copyright (c) 2007  Justin Ruggles
+Copyright (c) 2014 Thomas Volkert &lt;thomas@homer&ndash;conferencing.com&gt;
+Copyright (c) 2000, 2001, 2002, 2003 Fabrice Bellard
+Copyright (c) 2006, 2008 Konstantin Shishkov
+Copyright (c) 2007&ndash;2008 Vladimir Voroshilov
+Copyright (c) 2016 Michael Niedermayer
+Copyright (c) 2014 Michael Niedermayer
+Copyright (C) 2005  Matthieu CASTET
+Copyright (c) 2006 Gregory Montoir (cyx@users.sourceforge.net)
+Copyright (c) 2011 Juan Carlos Rodriguez &lt;ing.juancarlosrodriguez@hotmail.com&gt;
+Copyright (c) 2004 The FFmpeg project
+Copyright (c) 2004 The FFmpeg Project
+first version by Francois Revol &lt;revol@free.fr&gt;
+Copyright (c) 2006  Thijs Vermeir &lt;thijs.vermeir@barco.com&gt;
+Copyright (c) 2008 Ivo van Poorten
+Copyright (c) 2007 Anssi Hannula &lt;anssi.hannula@gmail.com&gt;
+Copyright 2005 Wim Taymans
+Copyright 2007 Edward Hervey
+Copyright 2007 Nokia Corporation
+Copyright 2007 Collabora Ltd, Philippe Kalaf
+Copyright 2010 Mark Nauwelaerts
+Copyright (c) 2006 Ryan Martell &lt;rdm4@martellventures.com&gt;
+Copyright (c) 2012 James Almer
+Copyright (c) 2016 Mobibase, France (http://www.mobibase.com)
+Copyright (c) 2010 Peter Ross
+Copyright (c) 2001, 2002 Fabrice Bellard
+Copyright (c) 2013 Daniel Verkamp &lt;daniel@drv.nu&gt;
+Copyright (c) 2014 Georg Lippitsch &lt;georg.lippitsch@gmx.at&gt;
+Copyright (c) 2007 The FFmpeg Project
+Copyright (c) 2009 Tobias Bindhammer
+Copyright (c) 2001 Fabrice Bellard (original AU code)
+Copyright (c) 2009 James Darnley
+Copyright (c) 2007 Ivo van Poorten
+Copyright (c) 2008, 2013 Maxim Poliakovski
+Copyright (c) 2014 Eejya Singh
+copyright (c) 2007 Luca Abeni
+Copyright (c) 2016 Marton Balnt &lt;cus@passwd.hu&gt;
+Copyright (c) 2006,2007 Ryan Martell
+Copyright (c) 2007 Björn Axelsson
+Copyright (c) 2010 Zhentan Feng &lt;spyfeng at gmail dot com&gt;
+Copyright (c) 2005 Vidar Madsen
+Copyright (c) 2009 Andrej Stepanchuk
+Copyright (c) 2009&ndash;2010 Howard Chu
+Copyright (c) 2004&ndash;2007 Michael Niedermayer
+Copyright (c) 2011 Konstantin Shishkov
+Copyright (c) 2006 Konstantin Shishkov
+Copyright (c) 2009 Bartlomiej Wolowiec
+Copyright Konstantin Shishkov
+Copyright (c) 2007 Baptiste Coudurier &lt;baptiste dot coudurier at free dot fr&gt;
+Copyright (c) 2010 Mohamed Naufal Basheer
+Copyright (c) 2007 Luca Abeni
+Copyright (c) 2007 Marco Gerards
+Copyright (c) 2009 David Conrad
+Copyright (c) 2008 Robert Marston
+Copyright (c) 2015 Hendrik Leppkes
+Copyright (c) 2003 Tinic Uro
+Copyright (c) 2011 Kieran Kunhya &lt;kieran@kunhya.com&gt;
+Copyright (c) 2011 Zhentan Feng &lt;spyfeng at gmail dot com&gt;
+Copyright (c) 2011 Peter Ross &lt;pross@xvid.org&gt;
+Copyright (c) 2008 Benjamin Larsson
+Copyright (c) 2012 Petri Hintukainen &lt;phintuka &lt;at&gt; users.sourceforge.net&gt;
+Copyright (C) 2005  Michael Ahlberg, Måns Rullgård
+Copyright (c) 2011, Luca Barbato
+Copyright (c) 2004&ndash;2006 Michael Niedermayer
+Copyright (c) 2003 Alex Beregszaszi
+Copyright (c) 2014 Vignesh Venkatasubramanian
+copyright (c) 2002 Francois Revol &lt;revol@free.fr&gt;
+copyright (c) 2006 Baptiste Coudurier &lt;baptiste.coudurier@free.fr&gt;
+Copyright (c) 2011 Justin Ruggles
+Copyright (c) 2006 Michael Niedermayer
+Copyright (c) 2013 Matthew Heaney
+Copyright (c) 2010 Anssi Hannula &lt;anssi.hannula at iki.fi&gt;
+Copyright (c) 2009 Colin McQuillian
+Copyright (c) 2010 Ronald S. Bultje
+Copyright (c) 2008 Luca Abeni
+Copyright (c) 2010 Howard Chu
+Copyright (c) 2016 Ståle Kristoffersen
+Copyright (C) 2009 Justin Ruggles
+Copyright (c) 2010 Mans Rullgard
+Copyright (c) 2006 Ryan Martell
+Copyright (c) 2009 Peter Ross
+Copyright (c) 2005, 2011 Peter Ross &lt;pross@xvid.org&gt;
+Copyright (c) 2002&ndash;2003 Fabrice Bellard
+Copyright (c) 2012&ndash;2013 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2011&ndash;2012 Paul B Mahol
+Copyright (c) 2006 Alex Beregszaszi
+Copyright (c) 2011 Miroslav Slugeň &lt;Thunder.m@seznam.cz&gt;
+Copyright (c) 2008&ndash;2009 Andrej Stepanchuk
+Copyright (c) 2015, Vignesh Venkatasubramanian
+Copyright (c) 2003&ndash;2004 The FFmpeg project
+Copyright (c) 2003 The FFmpeg Project
+Copyright (c) 2007 Ronald S. Bultje &lt;rbultje@ronald.bitfreak.net&gt;
+Copyright (c) 2013 Anssi Hannula
+Copyright (c) 2004  The FFmpeg project
+Copyright (c) 2006&ndash;2008 Peter Ross
+Copyright (C) 2008  David Conrad
+Copyright (c) 2003  The FFmpeg project
+Copyright (c) 2015 Carl Eugen Hoyos
+Copyright (c) 2015 Donny Yang
+first version by Donny Yang &lt;work@kota.moe&gt;
+Copyright (c) 2001&ndash;2014, Jim Teeuwen
+Copyright (c) 2011 Carl Eugen Hoyos
+Copyright (c) 2014 Marvin Scholz
+Copyright (c) 2015 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2011 Paul B Mahol
+Copyright (c) 2013 Dirk Farin &lt;dirk.farin@gmail.com&gt;
+Copyright (c) 2007 David Conrad
+Copyright (c) 2014 Lukasz Marek &lt;lukasz.m.luki@gmail.com&gt;
+Copyright (C) 2010 Mohamed Naufal Basheer &lt;naufal11@gmail.com&gt;
+Copyright (C) 2009 Thomas P. Higdon &lt;thomas.p.higdon@gmail.com&gt;
+Copyright (c) 2011 Max Horn
+Copyright (c) 2007 Nicholas Tung
+Copyright (c) 2009 Vitor Sessak
+Copyright (c) 2015  Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2012 Luca Barbato
+Copyright (c) 2013 Konstantin Shishkov &lt;kostya.shishkov@gmail.com&gt;
+Copyright (c) 2009 Robert Swain ( rob opendot cl )
+Copyright (c) 2006 Peter Ross
+Copyright (c) 2006 Steve Lhomme
+Copyright (c) 2007 Wolfram Gloger
+Copyright (c) 2010 Michele Orrù
+Copyright (c) 2006 Cyril Zorin
+copyright (c) 2002 Francois Revol
+seek function by Gael Chardon &lt;gael.dev@4now.net&gt;
+Copyright (c) 2006 Reynaldo H. Verdejo Pinochet
+Copyright (c) 2011 Sven Hesse &lt;drmccoy@drmccoy.de&gt;
+Copyright (c) 2011 Matthew Hoops &lt;clone2727@gmail.com&gt;
+Copyright (c) 2016 Jan Sebechlebsky
+Copyright (c) 2012, Luca Barbato
+Copyright (c) 2011,2014 Michael Niedermayer
+Copyright (c) 2014 Oleksij Rempel &lt;linux@rempel&ndash;privat.de&gt;
+Copyright (c) 2010 Fabrice Bellard
+Copyright (c) 2009  Stefan Gehrer &lt;stefan.gehrer@gmx.de&gt;
+Copyright (c) 2008 Gregory Montoir (cyx@users.sourceforge.net)
+Copyright (c) 2006 Baptiste Coudurier &lt;baptiste.coudurier@smartjog.com&gt;
+Copyright (c) 2009  Nicolas Martin (martinic at iro dot umontreal dot ca)
+Copyright (c) 2009 Ronald S. Bultje
+Copyright (C) 2008  Ramiro Polla
+Copyright (c) 2006,2011 Konstantin Shishkov
+Copyright (c) 2010 Tomas Härdin
+Copyright (c) 2007 Ronald S. Bultje
+Copyright (c) 2012 Michael Bradshaw &lt;mjbshaw gmail com&gt;
+Copyright (c) 2012 Antti Seppälä
+from Umberto Salsi (salsi@icosaedro.it)
+Copyright (c) 2011 Michael Karcher
+Copyright (c) 2010 Anssi Hannula
+Copyright (c) 2010 Carl Eugen Hoyos
+Copyright (c) 2008 GUCAS, Zhentan Feng &lt;spyfeng at gmail dot com&gt;
+Copyright (c) 2012 AvxSynth Team
+Copyright (c) 2011 Reimar Döffinger
+Copyright (c) 2002 Francois Revol &lt;revol@free.fr&gt;
+Copyright (c) 2006 Baptiste Coudurier &lt;baptiste.coudurier@free.fr&gt;
+Copyright (C) 2005  Matthieu CASTET, Alex Beregszaszi
+copyright (c) 2000, 2001, 2002 Fabrice Bellard
+Copyright (c) 2015 Luca Barbato
+Copyright (c) 2008 Ronald S. Bultje
+Copyright (c) 2012 Peter Ross
+Copyright (c) 2009 Kenan Gillet
+Copyright (c) 2011 Peter Ross (pross@xvid.org)
+Copyright (c) 2014 Paul B Mahol
+Copyright (c) 2016 James Almer
+Copyright (c) 2010 Reimar Döffinger
+Copyright (c) 2014 Alexandra Hájková
+Copyright (c) 2014 Benoit Fouet
+Luca Barbato &lt;lu_zero@gentoo.org&gt;
+Copyright (c) 2012 David Kment
+Copyright (c) 2015 Tiancheng &quot;Timothy&quot; Gu
+Copyright (c) 2016 Michael Niedermayer &lt;michael@niedermayer.cc&gt;
+Mans Rullgard &lt;mans@mansr.com&gt;
+Copyright (c) 2015 Thomas Volkert &lt;thomas@homer&ndash;conferencing.com&gt;
+Copyright (c) 2015 Martin Storsjo
+copyright (c) 2006 Oded Shimon &lt;ods15@ods15.dyndns.org&gt;
+Copyright (c) 2007 Vitor Sessak
+Copyright (c) 2008 Konstantin Shishkov
+Copyright (c) 2003&ndash;2008 The FFmpeg Project
+Copyright (c) 2011 Vladimir Voroshilov
+Copyright (c) 2008 Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 2007 Justin Ruggles
+Copyright (c) 2009 Benjamin Larsson
+Copyright (C) 2011 Michael Niedermayer (michaelni@gmx.at)
+Copyright (c) 2014 Peter Meerwald &lt;pmeerw@pmeerw.net&gt;
+Copyright (c) 1994&ndash;2012 by the Xiph.Org Foundation and contributors
+Copyright (c) 2007&ndash;2010 Stefano Sabatini
+Copyright (c) 2007 Nicolas George &lt;nicolas.george@normalesup.org&gt;
+Copyright (c) 2012 Andrey Utkin
+Copyright (c) 2015 Himangi Saraogi &lt;himangi774@gmail.com&gt;
+Copyright (c) 2001&ndash;2010 Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Vladimir Sadovnikov and others
+Copyright (c) 2013 Paul B Mahol
+Copyright (C) 2013 Wei Gao &lt;weigao@multicorewareinc.com&gt;
+Copyright (c) 2015 Matthieu Bouron &lt;matthieu.bouron stupeflix.com&gt;
+Copyright (c) 2011 Mina Nagy Zaki
+Copyright (c) 2010 Gordon Schmidt &lt;gordon.schmidt &lt;at&gt; s2000.tu&ndash;chemnitz.de&gt;
+Copyright (c) 2013&ndash;2015 Paul B Mahol
+Copyright (c) 2002 Jindrich Makovicka &lt;makovick@gmail.com&gt;
+Copyright (c) 2013, 2015 Jean Delvare &lt;jdelvare@suse.com&gt;
+Copyright (c) 2015 Kyle Swanson &lt;k@ylo.ph&gt;.
+Copyright (c) 2013 Oka Motofumi (chikuzen.mo at gmail dot com)
+Copyright (c) 2014 James Darnley &lt;james.darnley@gmail.com&gt;
+Copyright (c) 2015 Arwa Arif &lt;arwaarif1994@gmail.com&gt;
+Copyright (c) 2016 Davinder Singh (DSM_) &lt;ds.mudhar&lt;@gmail.com&gt;
+Copyright (c) 2012 Jeremy Tran
+Copyright (c) 2015 Timo Rothenpieler &lt;timo@rothenpieler.org&gt;
+Copyright (c) 2012&ndash;2013 Oka Motofumi (chikuzen.mo at gmail dot com)
+Copyright (c) 2013 Vittorio Giovara
+Copyright (c) 2014&ndash;2015 Muhammad Faiz &lt;mfcc64@gmail.com&gt;
+Copyright (c) 2014 Arwa Arif &lt;arwaarif1994@gmail.com&gt;
+Copyright (c) 2017 Gerion Entrup
+Copyright (c) 2016 Floris Sluiter
+Copyright (c) 2016 Ronald S. Bultje &lt;rsbultje@gmail.com&gt;
+Copyright (c) 2015 Muhammad Faiz &lt;mfcc64@gmail.com&gt;
+Copyright (c) 2010 S.N. Hemanth Meenakshisundaram &lt;smeenaks@ucsd.edu&gt;
+Copyright (c) 2003 Rich Felker
+Copyright (c) 1998 Juergen Mueller And Sundry Contributors
+Copyright (c) 2004 Ville Saari
+Copyright (c) 2010 Niel van der Westhuizen &lt;nielkie@gmail.com&gt;
+Copyright (c) 2002 A&prime;rpi
+Copyright (c) 1997&ndash;2001 ZSNES Team ( zsknight@zsnes.com / _demo_@zsnes.com )
+Copyright (C) 2006&ndash;2011 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+2010      James Darnley &lt;james.darnley@gmail.com&gt;
+Copyright (c) 2011 Nicolas George &lt;nicolas.george@normalesup.org&gt;
+Copyright (c) 2012 Fredrik Mellbin
+Copyright (c) 2014 Nicholas Robbins
+Copyright (c) 2012&ndash;2016 Paul B Mahol
+Copyright (c) 2013 Marton Balint
+Copyright (c) 2003&ndash;2013 Loren Merritt
+Copyright (c) 2015 Ronald S. Bultje &lt;rsbultje@gmail.com&gt;
+Copyright (c) 2016 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 1999 Chris Bagwell
+Copyright (c) 1999 Nick Bailey
+Copyright (c) 2007 Rob Sykes &lt;robs@users.sourceforge.net&gt;
+Copyright (c) 2014 Andrew Kelley
+Copyright (c) 2006 Rob Sykes &lt;robs@users.sourceforge.net&gt;
+Copyright (c) Stefano Sabatini 2010 Copyright (c) 2016 Paul B Mahol
+Copyright (c) 2013 Georg Martius &lt;georg dot martius at web dot de&gt;
+Copyright (c) 2012 Laurent de Soras
+Copyright (c) 2013 Fredrik Mellbin
+Copyright (c) 2015 James Darnley
+Copyright (c) 2015 LoRd_MuldeR &lt;mulder2@gmx.de&gt;. Some rights reserved.
+Copyright (c) 2016 Kyle Swanson &lt;k@ylo.ph&gt;.
+Copyright (c) 2003 Michael Zucchi &lt;notzed@ximian.com&gt;
+Copyright (c) 2010 Baptiste Coudurier
+Copyright (c) 2014 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) Stefano Sabatini | stefasab at gmail.com
+Copyright (c) S.N. Hemanth Meenakshisundaram | smeenaks at ucsd.edu
+Copyright (c) 2003 LeFunGus, lefungus@altern.org
+Copyright (c) 2011 Roger Pau Monné &lt;roger.pau@entel.upc.edu&gt;
+Copyright (c) 2003 Daniel Moreno &lt;comac AT comac DOT darktech DOT org&gt;
+Copyright (c) 2012 Loren Merritt
+Copyright (c) 2015 Paul B. Mahol
+Copyright (c) 2001&ndash;2010 Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Damien Zammit and others
+Copyright (c) 2010 Stefano Sabatini
+Copyright (c) 2008 Victor Paesa
+Copyright (C) 2001&ndash;2010 Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen
+Copyright (c) 2012 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2008 Vitor Sessak
+Copyright (c) 2007 Bobby Bingham
+Copyright (c) 2016 Tobias Rapp
+Copyright (C) 2012 Clément Bœsch
+Copyright (c) 2000 Edward Beingessner And Sundry Contributors.
+Copyright (c) 2016 Nicolas George
+Copyright (C) 2010 Georg Martius &lt;georg.martius@web.de&gt;
+Copyright (C) 2010 Daniel G. Taylor &lt;dan@programmer&ndash;art.org&gt;
+Copyright (c) 2011, 2012 Hyllian/Jararaca &lt;sergiogdb@gmail.com&gt;
+Copyright 2012 Stefano Sabatini &lt;stefasab gmail com&gt;
+Copyright (c) 2010 Nolan Lum &lt;nol888@gmail.com&gt;
+Copyright (c) 2009 Loren Merritt &lt;lorenm@u.washington.edu&gt;
+Copyright (C) 2006 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2012 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2015 Derek Buitenhuis
+Copyright (c) 2000 Chris Ausbrooks &lt;weed@bucket.pp.ualr.edu&gt;
+Copyright (c) 2000 Fabien COELHO &lt;fabien@coelho.net&gt;
+Copyright (c) 2012&ndash;2014 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2009 Rob Sykes &lt;robs@users.sourceforge.net&gt;
+Copyright (C) 2012 British Broadcasting Corporation, All Rights Reserved
+Copyright (C) 2006&ndash;2007 Kevin Stone
+ColorMatrix 1.x is Copyright (C) Wilbert Dijkhof
+Copyright (c) 2012 Steven Robertson
+Copyright (C) 2012 Mark Himsley
+get_scene_score() Copyright (c) 2011 Stefano Sabatini
+Copyright (c) 2014&ndash;2015 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2008 vmrsss
+Copyright (c) 2009 Stefano Sabatini
+Original copyright (c) 2002 Remi Guyomarch &lt;rguyom@pobox.com&gt;
+Port copyright (c) 2010 Daniel G. Taylor &lt;dan@programmer&ndash;art.org&gt;
+Copyright (c) 2007 Benoit Fouet
+Copyright (c) 2012&ndash;2013 Paul B Mahol
+Copyright (c) 2016 Muhammad Faiz &lt;mfcc64@gmail.com&gt;
+Copyright (c) 2008 Affine Systems, Inc (Michael Sullivan, Bobby Impollonia)
+Copyright (c) 2013 Andrey Utkin &lt;andrey.krieger.utkin gmail com&gt;
+Copyright (c) 2012 Google, Inc.
+Copyright (c) 2016 The FFmpeg Project
+Copyright (c) 2012 Pavel Koshevoy &lt;pkoshevoy at gmail dot com&gt;
+Copyright (c) 2015 Nicolas George
+Copyright (C) 2005 Nikolaj Poroshin &lt;porosh3@psu.ru&gt;
+Copyright (c) 2002 Anders Johansson &lt;ajh@atri.curtin.edu.au&gt;
+Copyright (c) 2011 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2015 Niklas Haas
+Copyright 2007 Bobby Bingham
+Copyright 2012 Robert Nagy &lt;ronag89 gmail com&gt;
+Copyright 2012 Anton Khirnov &lt;anton khirnov net&gt;
+Copyright (C) 2001&ndash;2010 Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Damien Zammit
+Copyright (c) 1998 &ndash; 2009 Conifer Software
+Copyright (C) 2016 Thomas Mundt &lt;loudmax@yahoo.de&gt;
+Copyright (c) 2003 Tobias Diedrich
+Copyright (c) 2006&ndash;2008 Rob Sykes &lt;robs@users.sourceforge.net&gt;
+Copyright (c) 2010 Mark Heath mjpeg0 @ silicontrip dot org
+Copyright (c) 2014 Dave Rice @dericed
+Copyright (c) 2011 Pascal Getreuer
+Copyright (c) 2015&ndash;2016 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2012 Rudolf Polzer
+Copyright (c) 2015 The FFmpeg Project
+Copyright (C) 2001&ndash;2010 Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen and others
+Copyright (c) 2011 Jan Kokemüller
+Copyright (C) 2004 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2011 Mark Himsley
+Copyright (c) 2001 Heikki Leinonen
+Copyright (c) 2001 Chris Bagwell
+Copyright (c) 2003 Donnie Smith
+Copyright (c) 2013 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2001&ndash;2010 Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen and others
+Copyright (C) 2009 Loren Merritt &lt;lorenm@u.washington.edu&gt;
+Copyright (C) 2014 Kieran Kunhya &lt;kierank@obe.tv&gt;
+Copyright (C) 2015 Paul B Mahol
+Copyright (c) 2012 Michael Niedermayer
+Copyright (c) 2011 Baptiste Coudurier
+Copyright 2010 S.N. Hemanth Meenakshisundaram &lt;smeenaks ucsd edu&gt;
+Copyright 2010 Stefano Sabatini &lt;stefano.sabatini&ndash;lala poste it&gt;
+Copyright (C) 2012 VLC authors and VideoLAN
+Author : Sukrit Sangwan &lt; sukritsangwan at gmail dot com &gt;
+Copyright (C) 2010, Chris Moeller, All rights reserved.
+copyright (c) 2007 Bobby Bingham
+Copyright (c) 2010 S.N. Hemanth Meenakshisundaram
+Copyright (c) 2003 Gustavo Sverzut Barbieri &lt;gsbarbieri@yahoo.com.br&gt;
+Copyright (c) 2007 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2004 Tobias Diedrich
+Copyright (c) 2003 Donald A. Graft
+Copyright (c) 2005 Robert Edele &lt;yartrebo@earthlink.net&gt;
+Copyright (c) Markus Schmidt and Christian Holschuh
+Copyright (c) 2011 Smartjog S.A.S, Clément Bœsch &lt;clement.boesch@smartjog.com&gt;
+Copyright (c) 2003 Michael Niedermayer
+Copyright Stefano Sabatini &lt;stefasab gmail com&gt;
+Copyright Vitor Sessak &lt;vitor1001 gmail com&gt;
+Copyright (c) 2013&ndash;2014 Clément Bœsch
+Copyright (C) 2013&ndash;2015 Andreas Fuchs, Wolfgang Hrauda, Acoustics Research Institute (ARI), Vienna, Austria
+Authors: Andreas Fuchs &lt;andi.fuchs.mail@gmail.com&gt;
+Wolfgang Hrauda &lt;wolfgang.hrauda@gmx.at&gt;
+Piotr Majdak &lt;piotr@majdak.at&gt;
+Copyright (C) 2012 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) Stefano Sabatini 2011 Copyright (c) 2015 Paul B Mahol
+Copyright (c) 2001 Donald A. Graft
+Copyright (C) 2010&ndash;2011 Kevin Stone
+Copyright (C) 2016 Paul B Mahol
+Copyright (c) 2015 Stupeflix
+Copyright (c) 2000 John Walker
+Copyright (c) 2011 Michael Niedermayer
+Copyright 2011 Stefano Sabatini &lt;stefano.sabatini&ndash;lala poste it&gt;
+Copyright 2012 Nicolas George &lt;nicolas.george normalesup org&gt;
+Copyright (c) 2010 Bobby Bingham
+Copyright (c) 2012&ndash;2013 Clément Bœsch
+Copyright (c) 2013 Rudolf Polzer &lt;divverent@xonotic.org&gt;
+Copyright (c) 2010 Brandon Mintern
+Copyright (C) 2007 Richard Spindler (author of frei0r plugin from which this was derived)
+Copyright (C) 2014 Daniel Oberhoff
+Copyright (c) 2006 Ivo van Poorten
+Copyright (c) 2006 Julian Hall
+Copyright (c) 2002&ndash;2003 Brian J. Murrell
+Copyright (c) 2015 Ludmila Glinskih
+Copyright (c) 2016 Alexandra Hájková
+Copyright (c) 2016 Tiancheng &quot;Timothy&quot; Gu
+Copyright (c) 2015 Henrik Gramner
+Copyright (c) 2008 Loren Merritt
+Copyright (c) 2016 Martin Storsjo
+Copyright (c) 2015 Janne Grunau
+copyright (c) Sebastien Bechet &lt;s.bechet@av7.net&gt;
+Copyright (c) 2013 MIPS Technologies, Inc., California.
+Copyright (c) 2005&ndash;2006 Oded Shimon ( ods15 ods15 dyndns org )
+Copyright (c) 2006&ndash;2007 Maxim Gavrilov ( maxim.gavrilov gmail com )
+Copyright (C) 2008&ndash;2009 Konstantin Shishkov
+Copyright (C) 2016 foo86
+Copyright (c) 2003&ndash;2004 Michael Niedermayer
+copyright (c) 2000,2001 Fabrice Bellard
+copyright (c) 2002&ndash;2004 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2003 The FFmpeg project
+Copyright (C) 2012 Carl Eugen Hoyos
+Copyright (C) 2004 Gildas Bazin
+Copyright (C) 2007 Konstantin Shishkov
+Copyright (c) 2008 BBC, Anuradha Suraparaju &lt;asuraparaju at gmail dot com &gt;
+Copyright (c) 2003 Ewald Snel
+Copyright (c) 2005 Benjamin Larsson
+Copyright (c) 2005 Roberto Togni
+Copyright (C) 2009 Dylan Yudaken
+Copyright (c) 2002 The FFmpeg Project
+Copyright (c) 2004 Konstantin Shishkov
+Copyright (c) 2002&ndash;2004 Michael Niedermayer
+Copyright (C) 2013 Ronald S. Bultje &lt;rsbultje gmail com&gt;
+Copyright (C) 2013 Clément Bœsch &lt;u pkh me&gt;
+Copyright (c) 2009 Thilo Borgmann &lt;thilo.borgmann _at_ mail.de&gt;
+Copyright (c) 2007 Kamil Nowosad
+Copyright (C) 2008 NVIDIA
+Copyright (c) 2007&ndash;2008 Peter Ross &lt;pross@xvid.org&gt;
+Copyright (c) 2009 Nathan Caldwell &lt;saintdev (at) gmail.com&gt;
+Copyright (C) 2008&ndash;2009 Splitted&ndash;Desktop Systems
+Xiaohui Sun &lt;tjnksxh@hotmail.com&gt;
+copyright (c) 2015 Hendrik Leppkes
+Copyright (C) 2015 Rostislav Pehlivanov
+Copyright (c) 2008 Vladimir Voroshilov
+Copyright (c) 2006 Kartikey Mahendra BHATT (bhattkm at gmail dot com)
+Copyright (c) 2007&ndash;2008 Bartlomiej Wolowiec &lt;bartek.wolowiec@gmail.com&gt;
+Copyright (c) 2002&ndash;2004 Roberto Togni
+Copyright (c) 2002&ndash;2012 Michael Niedermayer
+Copyright (C) 2012 Ronald S. Bultje
+Copyright (c) 2009&ndash;2010 Maxim Poliakovski
+Copyright (c) 2016 William Ma, Ted Ying, Jerry Jiang
+Copyright (c) 2007 SmartJog S.A., Baptiste Coudurier &lt;baptiste dot coudurier at smartjog dot com&gt;
+Copyright (c) 2006&ndash;2007 Konstantin Shishkov
+Partly based on vc9.c (c) 2005 Anonymous, Alex Beregszaszi, Michael Niedermayer
+Copyright (c) 2013 Aneesh Dogra &lt;aneesh@sugarlabs.org&gt;
+Copyright (c) 2013 Justin Ruggles &lt;justin.ruggles@gmail.com&gt;
+Copyright (c) 2006&ndash;2010 Justin Ruggles &lt;justin.ruggles@gmail.com&gt;
+Copyright (c) 2006&ndash;2010 Prakash Punnoor &lt;prakash@punnoor.de&gt;
+Copyright (C) 2015 Vittorio Giovara &lt;vittorio.giovara@gmail.com&gt;
+copyright (c) 2004 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2016 Open Broadcast Systems Ltd.
+Author        2016 Rostislav Pehlivanov &lt;atomnuker@gmail.com&gt;
+Copyright (c) 2011 MirriAd Ltd
+Copyright (c) 2015 Christophe Gisquet
+10 bit support added by MirriAd Ltd, Joseph Artsimovich &lt;joseph@mirriad.com&gt;
+copyright (c) 2006 Konstantin Shishkov
+(c) 2005 anonymous, Alex Beregszaszi, Michael Niedermayer
+Copyright (C) 2015 Tom Butterworth &lt;bangnoise@gmail.com&gt;
+Copyright (c) 2005 Konstantin Shishkov
+Copyright (C) 2003 Mike Melanson
+Copyright (C) 2003 Dr. Tim Ferguson
+Copyright (c) 2006,2008 Peter Ross
+copyright (c) 2015 Steve Lhomme
+Copyright (C) 2008 Michael Niedermayer
+Copyright (c) 2017 Paras Chadha
+Copyright (c) 2015&ndash;2016 Matthieu Bouron &lt;matthieu.bouron stupeflix.com&gt;
+4MV &amp; hq &amp; B&ndash;frame encoding stuff by Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2006  Justin Ruggles &lt;justin.ruggles@gmail.com&gt;
+Copyright (C) 2008 Jaikrishnan Menon
+Copyright (C) 2011 Stefano Sabatini
+copyright (c) 2009 Laurent Aimar
+Copyright (C) 2006  Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 1990 James Ashton &ndash; Sydney University
+Copyright (c) 2008 Laurent Aimar &lt;fenrir@videolan.org&gt;
+Copyright (c) 2010&ndash;2013 Maxim Poliakovski
+msmpeg4v1 &amp; v2 stuff by Michael Niedermayer &lt;michaelni@gmx.at&gt;
+copyright (c) 2005 Konstantin Shishkov
+Copyright (c) 2002&ndash;2004 Maxim Poliakovski
+Copyright (c) 2006 Benjamin Larsson
+Copyright (c) 2015 Vittorio Giovara &lt;vittorio.giovara@gmail.com&gt;
+Copyright (C) 2004&ndash;2010 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2012 Andrew D&prime;Addesio
+Copyright (c) 2013&ndash;2014 Mozilla Corporation
+Copyright (c) 2016 Rostislav Pehlivanov &lt;atomnuker@gmail.com&gt;
+Copyright (c) 2014 Peter Ross &lt;pross@xvid.org&gt;
+Authors:  Stanislav Ocovaj (socovaj@mips.com)
+Goran Cordasic   (goran@mips.com)
+Djordje Pesut    (djordje@mips.com)
+Copyright (c) 2017 Rostislav Pehlivanov &lt;atomnuker@gmail.com&gt;
+Copyright (c) 2010, Google, Inc.
+Copyright (c) CMU 1993 Computer Science, Speech Group
+Copyright (c) 2005 Steve Underwood &lt;steveu at coppice.org&gt;
+Copyright (C) 2014 Oleksij Rempel &lt;linux@rempel&ndash;privat.de&gt;
+Copyright (c) 2012 Mans Rullgard &lt;mans@mansr.com&gt;
+Copyright (c) 2011  Justin Ruggles
+Copyright (C) 2008 Konstantin Shishkov
+Copyright (c) 2007 a840bda5870ba11f19698ff6eb9581dfb0f95fa5, 539459aeb7d425140b62a3ec7dbf6dc8e408a306, and
+Copyright (c) 2007 Loic Minier &lt;lool at dooz.org&gt;
+Copyright (c) 2014 Reimar Döffinger &lt;Reimar.Doeffinger@gmx.de&gt;
+Copyright (C) 2007 Nicholas Tung
+Copyright (C) 2012 &ndash; 2103 Guillaume Martres
+Copyright (C) 2012 &ndash; 2103 Mickael Raulet
+Copyright (C) 2012 &ndash; 2013 Gildas Cocherel
+Copyright (C) 2013 Vittorio Giovara
+Copyright (c) 2013 Thilo Borgmann &lt;thilo.borgmann _at_ mail.de&gt;
+Copyright (c) 2011 Derek Buitenhuis
+Copyright (c) 2011 Justin Ruggles &lt;justin.ruggles@gmail.com&gt;
+Copyright (c) 2008 NVIDIA
+Copyright (c) 2013 Rémi Denis&ndash;Courmont
+Copyright (c) 2007 Baptiste Coudurier, Benjamin Larsson, Ulion
+Copyright (c) 2008 &ndash; 2011 Sascha Sommer, Benjamin Larsson
+Copyright (c) 2007 Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 2001,2003 BERO
+Copyright (c) 2006 Baptiste Coudurier
+Copyright (c) 2005&ndash;2010, 2012 Wolfram Gloger
+Initial code by Daniel Maas &lt;dmaas@maasdigital.com&gt; (funded by BBC R&amp;D)
+Copyright (c) 2005 Mans Rullgard
+copyright (c) 2007 Konstantin Shishkov
+Copyright (c) 2012  Philip Langdale &lt;philipl@overt.org&gt;
+Copyright (c) 2007 Bartlomiej Wolowiec
+Copyright (c) 2003&ndash;2016 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2012 Aleksi Nurmi
+Copyright (c) 2009 Stephen Backway
+Copyright (c) 2013 Konstantin Shishkov
+Copyright (c) 2002&ndash;2010 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2003&ndash;2011 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2005 DivX, Inc.
+Copyright (c) 2009 Bjorn Axelsson
+ported to MPlayer by Arpi &lt;arpi@thot.banki.hu&gt;
+ported to libavcodec by Nick Kurshev &lt;nickols_k@mail.ru&gt;
+Copyright (c) 2002 The Xine project
+Copyright (c) 2002 The FFmpeg project
+SVQ1 Encoder (c) 2004 Mike Melanson &lt;melanson@pcisys.net&gt;
+copyright (c) 2016 Rodger Combs
+Copyright (c) 2007&ndash;2008 Peter Ross
+Copyright (c) 2016 Reimar Döffinger &lt;Reimar.Doeffinger@gmx.de&gt;
+Copyright (c) 2007 Reynaldo H. Verdejo Pinochet
+Copyright (c) 2007 Bartlomiej Wolowiec &lt;bartek.wolowiec@gmail.com&gt;
+Copyright (c) 2008 Justin Ruggles
+Copyright (C) 2014 Vittorio Giovara &lt;vittorio.giovara@gmail.com&gt;
+Copyright (c) 2007&ndash;2008 Ian Caulfield
+Copyright (c) 2009 Maxim Poliakovski
+Copyright (c) 2006 Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 2009 Peter Ross &lt;pross@xvid.org&gt;
+Copyright (c) 2010 Alex Converse &lt;alex.converse@gmail.com&gt;
+Copyright (c) 2010 Vitor Sessak
+Copyright (c) 2005 Alban Bedel &lt;albeu@free.fr&gt;
+Copyright (c) 2006, 2007 Michel Bardiaux &lt;mbardiaux@mediaxim.be&gt;
+Copyright (c) 2006&ndash;2007 Robert Swain
+Copyright (c) 2009 Colin McQuillan
+based upon code from Sebastian Jedruszkiewicz &lt;elf@frogger.rules.pl&gt;
+copyright (c) 2013 Yukinori Yamazoe
+Copyright (c) 2002, 2003 Fabrice Bellard
+Copyright (c) 2009 Justin Ruggles
+Copyright (c) 2006 Paul Richards &lt;paul.richards@gmail.com&gt;
+Copyright (c) 2005 David Hammerton
+Copyright (c) Mohamed Naufal &lt;naufal22@gmail.com&gt;
+Copyright (C) 2011 Konstantin Shishkov
+Copyright (C) 2010 Ronald S. Bultje
+Copyright (C) 2014 Peter Ross
+Copyright (c) 2004 Alex Beregszaszi
+Copyright (c) 2011 Andreas Öman
+Copyright (c) 2011 &ndash; 2012 Mashiat Sarker Shakkhar
+Copyright (C) 2007 The FFmpeg Project
+Copyright (c) 2001&ndash;2003 The FFmpeg project
+first version by Francois Revol (revol@free.fr)
+EA ADPCM decoder by Robin Kay (komadori@myrealbox.com)
+EA ADPCM R1/R2/R3 decoder by Peter Ross (pross@xvid.org)
+EA IMA EACS decoder by Peter Ross (pross@xvid.org)
+EA IMA SEAD decoder by Peter Ross (pross@xvid.org)
+EA ADPCM XAS decoder by Peter Ross (pross@xvid.org)
+MAXIS EA ADPCM decoder by Robert Marston (rmarston@gmail.com)
+THP ADPCM decoder by Marco Gerards (mgerards@xs4all.nl)
+Copyright (C) 2008 Sascha Sommer (saschasommer@freenet.de)
+Copyright (C) 2007 Marco Gerards &lt;marco@gnu.org&gt;
+Copyright (C) 2009 David Conrad
+Copyright (C) 2011 Jordi Ortiz
+Copyright (C) 2014 Martin Storsjo
+copyright (c) 2012 Sebastien Zwickert
+Copyright (c) 2012  Justin Ruggles
+Copyright (c) 2009 &ndash; 2011 Maxim Poliakovski
+Copyright (C) 2006&ndash;2011 Xvid Solutions GmbH
+Copyright (c) 2016 Timo Rothenpieler &lt;timo@rothenpieler.org&gt;
+Copyright(C) 2010,2011 Philip Langdale &lt;ffmpeg.philipl@overt.org&gt;
+Copyright (c) 2010 Francesco Lavra &lt;francescolavra@interfree.it&gt;
+Copyright (C) 2011 Peter Ross &lt;pross@xvid.org&gt;
+Copyright (C) 2008 David Conrad
+Copyright (C) 2015 Open Broadcast Systems Ltd.
+Author    (C) 2015 Rostislav Pehlivanov &lt;atomnuker@gmail.com&gt;
+Copyright (c) 2012 Konstantin Shishkov
+Copyright (c) 2013 Maxim Poliakovski
+Copyright (c) 2005 Eric Lasota
+Based on RoQ specs (c)2001 Tim Ferguson
+Copyright (c) 2016 Matthieu Bouron &lt;matthieu.bouron stupeflix.com&gt;
+Copyright (c) 2007&ndash;2011 Peter Ross (pross@xvid.org)
+Copyright (c) 2003 Sascha Sommer
+Copyright (C) 2004 Mike Melanson &lt;melanson@pcisys.net&gt;
+Copyright (c) 2006  Stefan Gehrer &lt;stefan.gehrer@gmx.de&gt;
+Copyright (c) 2015  Ganesh Ajjanagadde
+copyright (c) 2010 Laurent Aimar
+Copyright (C) 2006 Robert Edele &lt;yartrebo@earthlink.net&gt;
+Copyright (c) 2008 Reimar Döffinger
+copyright (c) 2013 Luca Barbato
+copyright (c) 2015 Anton Khirnov &lt;anton@khirnov.net&gt;
+Copyright (c) 2013 Nicolas Bertrand &lt;nicoinattendu@gmail.com&gt;
+Copyright (C) 2012 &ndash; 2013 Guillaume Martres
+Copyright (c) 2001 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2006, 2007 Michel Bardiaux
+Copyright (c) 2004 Maarten Daniels
+Copyright (c) 2008 &ndash; 2009 Sascha Sommer
+Copyright (c) 2008&ndash;2009 Robert Swain ( rob opendot cl )
+Copyright (c) 2010      Alex Converse &lt;alex.converse@gmail.com&gt;
+Copyright (C) 2013 Seppo Tomperi
+Copyright (C) 2013 Wassim Hamidouche
+Copyright (c) 2010 Reimar Döffinger &lt;Reimar.Doeffinger@gmx.de&gt;
+Copyright (c) 2008  Jaikrishnan Menon &lt;realityman@gmx.net&gt;
+Copyright (c) 2004 Adam Thayer &lt;krevnik@comcast.net&gt;
+new motion estimation (X1/EPZS) by Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2008 Eli Friedman (eli.friedman &lt;at&gt; gmail.com)
+copyright (C) 2006 Corey Hickey
+Copyright (C) 2015 Claudio Freire
+Copyright (c) 2011 Janne Grunau &lt;janne&ndash;libav@jannau.net&gt;
+Copyright (c) 2017 Google Inc.
+Copyright (c) 2012 Mans Rullgard
+Copyright (c) 2007 Siarhei Siamashka &lt;ssvb@users.sourceforge.net&gt;
+Copyright (c) 2014 Seppo Tomperi &lt;seppo.tomperi@vtt.fi&gt;
+Copyright (c) 2011 Mans Rullgard &lt;mans@mansr.com&gt;
+Copyright (c) 2006 Michael Niedermayer &lt;michaelni@gmx.at&gt; et al
+Copyright (c) 2001 Lionel Ulmer
+Copyright (c) 2014 RISC OS Open Ltd
+Author: Ben Avison &lt;bavison@riscosopen.org&gt;
+Copyright (c) 2015 Peter Meerwald &lt;pmeerw@pmeerw.net&gt;
+Copyright (c) 2002 Michael Niedermayer
+Copyright (C) 2010 Mans Rullgard &lt;mans@mansr.com&gt;
+Copyright (C) 2009 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2012 Carl Eugen Hoyos
+Copyright (c) 2006&ndash;2011 Justin Ruggles &lt;justin.ruggles@gmail.com&gt;
+Copyright (c) 2016 Jokyo Images
+Copyright (c) 2005 Jeff Muizelaar
+Copyright (c) 2001 Juan J. Sierralta P
+Copyright (c) 2007 Reimar Döffinger
+Copyright (c) 2015 Rostislav Pehlivanov ( atomnuker gmail com )
+Copyright (c) 2002 Alex Beregszaszi
+Copyright (c) 2003&ndash;2010 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2010&ndash;2011 Maxim Poliakovski
+Copyright (c) 2015 Urvang Joshi
+Copyright (c) 2006&ndash;2007 Maxim Poliakovski
+Copyright (c) 2006&ndash;2007 Benjamin Larsson
+Copyright (c) 2002&ndash;2007 The FFmpeg Project
+Copyright (c) 2010 Marcelo Galvao Povoa
+Author    (C) 2016 Rostislav Pehlivanov &lt;atomnuker@gmail.com&gt;
+Todd Kirby &lt;doubleshot@pacbell.net&gt;
+Copyright (c) 2006&ndash;2008 Maxim Poliakovski
+Copyright (c) 2006&ndash;2008 Benjamin Larsson
+Copyright (c) 2010 Thilo Borgmann &lt;thilo.borgmann _at_ mail.de&gt;
+Copyright (c) 2002 Mark Hills &lt;mark@pogo.org.uk&gt;
+Copyright (c) 2008 Baptiste Coudurier &lt;baptiste.coudurier@free.fr&gt;
+Copyright (c) 2008 Loren Merrit &lt;lorenm@u.washington.edu&gt;
+Copyright (c) 2003 Ivan Kalvachev
+Copyright (c) 2012&ndash;2013 Derek Buitenhuis
+Copyright (c) 2008 Bartlomiej Wolowiec
+Copyright (c) 2002&ndash;2014 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2016 Martin Storsjo
+Copyright (c) 2008 Alexander Strange (astrange@ithinksw.com)
+to Michael Niedermayer &lt;michaelni@gmx.at&gt; for writing initial
+Copyright (c) 2012 Justin Ruggles
+Copyright (c) 2008 Ramiro Polla
+Copyright (c) 2007 Baptiste Coudurier
+Copyright (c) 2003&ndash;2013 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2009 Reimar Doeffinger &lt;Reimar.Doeffinger@gmx.de&gt;
+Copyright (c) 2015 Loongson Technology Corporation Limited
+Copyright (c) 2015 Zhou Xiaoyong &lt;zhouxiaoyong@loongson.cn&gt;
+Author:  Stanislav Ocovaj (socovaj@mips.com)
+Szabolcs Pal     (sabolc@mips.com)
+Copyright (c) 2015 Parag Salasakar (Parag.Salasakar@imgtec.com)
+Authors:  Darko Laus      (darko@mips.com)
+Djordje Pesut   (djordje@mips.com)
+Mirjana Vulin   (mvulin@mips.com)
+Authors:  Djordje Pesut   (djordje@mips.com)
+Copyright (c) 2015 Shivraj Patil (Shivraj.Patil@imgtec.com)
+Author:  Bojan Zivkovic (bojan@mips.com)
+Zhou Xiaoyong &lt;zhouxiaoyong@loongson.cn&gt;
+Copyright (c) 2015 Parag Salasakar (parag.salasakar@imgtec.com)
+Zhang Shuangshuang &lt;zhangshuangshuang@ict.ac.cn&gt;
+Authors:  Branimir Vasic (bvasic@mips.com)
+Nedeljko Babic (nbabic@mips.com)
+Heiher &lt;r@hev.cc&gt;
+Author:  Bojan Zivkovic   (bojan@mips.com)
+copyright (c) 2011 Mashiat Sarker Shakkhar
+copyright (C) 2004 Konstantin Shishkov
+Copyright (c) 2015 Andreas Cadhalpun &lt;Andreas.Cadhalpun@googlemail.com&gt;
+copyright (c) 2015 Anton Khirnov
+Copyright (c) 2009&ndash;2011 Maxim Poliakovski
+Copyright (c) 2009 Peter Holik
+Copyright (c) 2010 Adrian Daerr and Nicolas George
+Copyright (c) 2010 Daniel Verkamp
+Copyright (c) 2011 Mashiat Sarker Shakkhar
+copyright (c) 2008 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2009 Alex Converse &lt;alex.converse@gmail.com&gt;
+Copyright (C) 2009 Benjamin Dobell, Glass Echidna
+Copyright (C) 2012 Matthäus G. &quot;Anteru&quot; Chajdas (http://anteru.net)
+Copyright (C) 2004 Benjamin Zores
+Copyright (C) 2006 Benjamin Larsson
+Copyright (c) 2007 Baptiste Coudurier &lt;baptiste dot coudurier at smartjog dot com&gt;
+Copyright (c) 2009&ndash;2010 Alex Converse &lt;alex.converse@gmail.com&gt;
+Copyright (c) 2009 Alex Converse &lt;alex dot converse at gmail dot com&gt;
+Copyright (c) 2007 Mike Melanson, Konstantin Shishkov
+Copyright (c) 2011 Janne Grunau
+Copyright (C) 2003 Ivan Kalvachev
+Copyright (c) 2009 Jaikrishnan Menon &lt;realityman@gmx.net&gt;
+Copyright (c) 2015 Vittorio Giovara
+Copyright (c) 2014 Konstantin Shishkov
+Copyright (c) 2014 Derek Buitenhuis
+Copyright (c) 2014 James Yu &lt;james.yu@linaro.org&gt;
+Copyright (c) 2014  Aman Gupta &lt;ffmpeg@tmm1.net&gt;
+Copyright (c) 2000&ndash;2002 Fabrice Bellard
+Copyright (C) 2007 Vitor Sessak &lt;vitor1001@gmail.com&gt;
+copyright (c) 2011 Sebastien Zwickert
+Copyright (c) 2010 Google, Inc.
+Copyright (c) 2013 Darryl Wallace &lt;wallacdj@gmail.com&gt;
+Copyright (c) 2010 Michael Niedermayer
+Copyright (c) 2002 Francois Revol
+Copyright (c) 2012 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2002 Lennert Buytenhek &lt;buytenh@gnu.org&gt;
+Copyright (c) 2007 Reynaldo H. Verdejo Pinochet (QCELP decoder)
+Copyright (c) 2004&ndash;2011 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2005  Mans Rullgard &lt;mans@mansr.com&gt;
+Copyright (C) 2004&ndash;2007 Eric Lasota
+Based on RoQ specs (C) 2001 Tim Ferguson
+Copyright (c) 2007&ndash;2009 Peter Ross &lt;pross@xvid.org&gt;
+copyright (c) 2005 Denes Balatoni ( dbalatoni programozo hu )
+Copyright (C) 2012 Konstantin Shishkov
+Copyright (c) 2011 Michael Bradshaw &lt;mjbshaw gmail com&gt;
+Copyright (C) 2013 &ndash; 2014 Pierre&ndash;Edouard Lepere
+Copyright (c) 2013 Guillaume Martres &lt;smarter@ubuntu.com&gt;
+Copyright (c) 2001&ndash;2003 BERO &lt;bero@geocities.co.jp&gt;
+Copyright (c) 2011 Oskar Arvidsson
+Copyright (c) 2012 Jan Ekström
+Copyright (C) 2008 Eli Friedman (eli.friedman@gmail.com)
+Copyright 2017 Steinar H. Gunderson
+This software is copyright (C) 1991, 1992, Thomas G. Lane.
+this README file must be included, with this copyright and no&ndash;warranty
+Copyright (c) 2007&ndash;2008 Marco Gerards &lt;marco@gnu.org&gt;
+Copyright (c) 2008 BBC, Anuradha Suraparaju &lt;asuraparaju@gmail.com&gt;
+Copyright (c) 2007 Ian Caulfield
+Author        2016 Rostislav Pehlivanov &lt;rpehlivanov@obe.tv&gt;
+Copyright (c) 2012 Nathan Caldwell
+Copyright (C) 2009 Joshua Warner
+Copyright (c) 2002 Falk Hueffner &lt;falk@debian.org&gt;
+written by Aaron Holtzman &lt;aholtzma@ess.engr.uvic.ca&gt;)
+Alpha optimizations by Måns Rullgård &lt;mans@mansr.com&gt;
+and Falk Hueffner &lt;falk@debian.org&gt;
+copyright (c) 2004 Maarten Daniels
+Copyright (c) 2013 Ash Hughes
+Copyright (c) 2009, 2011 Sebastian Gesemann. All rights reserved.
+Copyright (C) 2011 Martin Storsjo
+Copyright (c) 2010 Fiona Glaser &lt;fiona@x264.com&gt;
+Copyright (c) 2011 Thomas Kuehnel
+Copyright (c) 2005 Ian Caulfield
+Copyright (C) 2004 Konstantin Shishkov
+Copyright (c) 2006 Industrial Light &amp; Magic, a division of Lucas Digital Ltd. LLC
+Copyright (c) 2009 Jimmy Christensen
+Copyright (C) 2005 The FFmpeg project
+Copyright (c) 2013 Philip Langdale
+copyright (c) 2008 Paul Kendall &lt;paul@kcbbs.gen.nz&gt;
+Copyright (c) 2011 Anatoliy Wasserman
+Copyright (c) 2010&ndash;2011 Elvis Presley
+Copyright (c) 2002 Laszlo Torok &lt;torokl@alpha.dfmk.hu&gt;
+Copyright (c) 2005 Fabrice Bellard
+Cinepak encoder (c) 2011 Tomas Härdin
+(c) 2013, 2014 Rl, Aetey Global Technologies AB
+Copyright (c) 2015 Tampere University of Technology
+Copyright (C) 2012 &ndash; 2013 Mickael Raulet
+Copyright (C) 2012 &ndash; 2013 Wassim Hamidouche
+Copyright (C) 2003 Roberto Togni
+Copyright (c) 2010 Peter Ross (pross@xvid.org)
+Copyright (c) 2007 Christophe GISQUET &lt;christophe.gisquet@free.fr&gt;
+Copyright (c) 2014 James Almer
+Copyright (c) 2012&ndash;2014 Christophe Gisquet &lt;christophe.gisquet@gmail.com&gt;
+Optimized for ia32 CPUs by Nick Kurshev &lt;nickols_k@mail.ru&gt;
+H.263, MPEG&ndash;1, MPEG&ndash;2 dequantizer &amp; draw_edges by Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2016 Rostislav Pehlivanov &lt;atomnuker@gmail.com&gt;
+MMX optimization by Michael Niedermayer &lt;michaelni@gmx.at&gt;
+3DNow! and SSSE3 optimization by Zuxy Meng &lt;zuxy.meng@gmail.com&gt;
+Copyright (c) 2004&ndash;2005 Michael Niedermayer, Loren Merritt
+Copyright (c) 2003&ndash;2004 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+MMX optimization by Nick Kurshev &lt;nickols_k@mail.ru&gt;
+mostly rewritten by Michael Niedermayer &lt;michaelni@gmx.at&gt;
+and improved by Zdenek Kabelac &lt;kabi@users.sf.net&gt;
+Copyright (c) 2010 Ronald S. Bultje &lt;rsbultje@gmail.com&gt;
+Copyright (c) 2013 Ronald S. Bultje &lt;rsbultje gmail com&gt;
+Copyright (c) 2009 Ramiro Polla
+Copyright (c) 2007 Loren Merritt
+cleanup/optimizations are Copyright (c) 2002&ndash;2004 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+SSE2 optimization is Copyright (c) 2004 Denes Balatoni.
+Copyright (C) 2006 Loren Merritt &lt;lorenm@u.washington.edu&gt;
+Copyright (c) 2011 Daniel Kang
+Copyright (c) 2012 Christophe Gisquet &lt;christophe.gisquet@gmail.com&gt;
+Copyright (C) 2012 Christophe Gisquet &lt;christophe.gisquet@gmail.com&gt;
+Copyright (c) 2009 David Conrad &lt;lessen42@gmail.com&gt;
+Copyright (c) 2013 Seppo Tomperi
+Copyright (c) 2013 &ndash; 2014 Pierre&ndash;Edouard Lepere
+Copyright (c) 2014&ndash;2016 James Almer
+Copyright (c) 2013 Diego Biurrun &lt;diego@biurrun.de&gt;
+Copyright (c) 2005&ndash;2006 Robert Edele &lt;yartrebo@earthlink.net&gt;
+Copyright (C) 2009  Sebastien Lucas &lt;sebastien.lucas@gmail.com&gt;
+Copyright (C) 2009  Zuxy Meng &lt;zuxy.meng@gmail.com&gt;
+Copyright (C) 2002&ndash;2012 Michael Niedermayer
+Copyright (C) 2010  Eli Friedman
+Copyright (c) 2001, 2002 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (C) 2003, 2004 The FFmpeg project
+copyright (c) 2015 Rick Kern &lt;kernrj@gmail.com&gt;
+Copyright (c) 2002&ndash;2013 Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2008 Alexander Strange &lt;astrange@ithinksw.com&gt;
+Copyright (C) 2010 Amanda, Y.N. Wu &lt;amanda11192003@gmail.com&gt;
+Copyright (C) 2003 Alex Beregszaszi &amp; Mike Melanson
+Copyright (C) 2004 Alex Beregszaszi
+for decoding algorithms are not necessarily copyrightable.
+Copyright (c) 2008&ndash;2013 Alex Converse &lt;alex.converse@gmail.com&gt;
+Copyright (c) 2008&ndash;2010 Paul Kendall &lt;paul@kcbbs.gen.nz&gt;
+Copyright (c) 2010      Janne Grunau &lt;janne&ndash;libav@jannau.net&gt;
+Copyright (c) 2009 Alex Converse
+Copyright (c) 2013 The FFmpeg Project
+Copyright (c) 2007 Vladimir Voroshilov
+Copyright (C) 2008&ndash;2012 Alexander E. Patrakov
+Copyright (c) 2012 Aneesh Dogra (lionaneesh) &lt;lionaneesh@gmail.com&gt;
+This software is copyright (C) 1994&ndash;1996, Thomas G. Lane.
+Copyright (c) 2009 Xuggle Incorporated
+Copyright (C) 2010 Fiona Glaser
+Copyright (C) 2012 Daniel Kang
+Copyright (c) 2010 Hans de Goede &lt;hdegoede@redhat.com&gt;
+This software is copyright (C) 1991&ndash;1996, Thomas G. Lane.
+Copyright (c) 2017 Matthieu Bouron &lt;matthieu.bouron@gmail.com&gt;
+Copyright (C) 2004 The FFmpeg project
+Copyright (c) 2012 Laurent Aimar
+Copyright (c) 2010 Loren Merritt
+alternative bitstream reader &amp; writer by Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2015 Anshul Maheshwari
+copyright (c) 2007 Aurelien Jacobs &lt;aurel@gnuage.org&gt;
+Copyright (c) 2015 Kieran Kunhya
+Copyright (c) 2011 Anatoly Nenashev
+Copyright (c) 2002&ndash;2007, Communications and Remote Sensing Laboratory, Universite catholique de Louvain (UCL), Belgium
+Copyright (c) 2002&ndash;2007, Professor Benoit Macq
+Copyright (c) 2001&ndash;2003, David Janssens
+Copyright (c) 2002&ndash;2003, Yannick Verschueren
+Copyright (c) 2003&ndash;2007, Francois&ndash;Olivier Devaux and Antonin Descampe
+Copyright (c) 2005, Herve Drolon, FreeImage Team
+Copyright (c) 2007, Callum Lerwick &lt;seg@haxxed.com&gt;
+Copyright (c) 2012, Xidorn Quan
+Copyright (c) 2005 Wolfram Gloger
+Copyright (c) Luca Barbato
+copyright (c) 2001 Juan J. Sierralta P
+Copyright (c) 2007&ndash;2009 Peter Ross
+Copyright (C) 2015 Timo Rothenpieler &lt;timo@rothenpieler.org&gt;
+gmc &amp; q&ndash;pel &amp; 32/64 bit based MC by Michael Niedermayer &lt;michaelni@gmx.at&gt;
+Copyright (c) 2015&ndash;2016 Kieran Kunhya &lt;kieran@kunhya.com&gt;
+Copyright (c) 2012, Derek Buitenhuis
+Copyright (c) 2007 Benoit Fouet &lt;benoit.fouet@free.fr&gt;
+Copyright (c) 2006&ndash;2013 Maxim Poliakovski
+Copyright (c) 2004&ndash;2008 Marko Kreen
+Copyright (c) 2008 Adam Gashlin
+Copyright (c) 2013&ndash;2014 Derek Buitenhuis
+Copyright (C) 2005  Ole André Vadla Ravnås &lt;oleavr@gmail.com&gt;
+Copyright (c) 2009&ndash;2013 Maxim Poliakovski
+Copyright (c) 2009, 2013 Christian Schmidt
+Copyright (c) 2010 Michael Chinen
+Copyright (C) 2007 Clemens Fruhwirth
+Copyright (C) 2007 Alexis Ballier
+Copyright (c) 2013 Christian Schmidt
+copyright (c) 2002 The FFmpeg Project
+Copyright (c) 2003 Nick Kurshev
+(c) 2001 Fabrice Bellard
+2007 Marc Hoffman &lt;marc.hoffman@analog.com&gt;
+Copyright (c) 2016 William Ma, Sofia Kim, Dustin Woo
+(c) 2002 Fabrice Bellard
+Copyright (c) 2005 Roine Gustafsson
+Copyright (c) 2008 Robert Swain
+Copyright (C) 2003&ndash;2004 The FFmpeg project
+Copyright (c) 2002 Brian Foley
+Copyright (c) 2002 Dieter Shirley
+Copyright (c) 2003&ndash;2004 Romain Dolbeau &lt;romain@dolbeau.org&gt;
+Copyright (c) 2014 Rong Yan
+Copyright (c) 2004 Romain Dolbeau &lt;romain@dolbeau.org&gt;
+Copyright (c) 2003 Romain Dolbeau &lt;romain@dolbeau.org&gt;
+Copyright (c) 2007 Luca Barbato &lt;lu_zero@gentoo.org&gt;
+Copyright (C) 2003  James Klicman &lt;james@klicman.org&gt;
+Copyright (c) 2001 Michel Lespinasse
+Copyright (c) 2009 Loren Merritt
+Copyright (c) 2003&ndash;2004 Romain Dolbeau
+Copyright (C) 2013 Anand Meher Kotra
+copyright (c) 2014 &ndash; 2015 Hendrik Leppkes
+
+
+FFmpeg License and Legal Considerations
+
+Legal issues are a constant source of questions and confusion. This is an attempt to clarify the most important issues. The usual disclaimers apply, this is not legal advice.
+
+FFmpeg License
+
+FFmpeg is licensed under the GNU Lesser General Public License (LGPL) version 2.1 or later. However, FFmpeg incorporates several optional parts and optimizations that are covered by the GNU General Public License (GPL) version 2 or later. If those parts get used the GPL applies to all of FFmpeg.
+
+Read the license texts to learn how this affects programs built on top of FFmpeg or reusing FFmpeg. You may also wish to have a look at the GPL FAQ.
+
+Note that FFmpeg is not available under any other licensing terms, especially not proprietary/commercial ones, not even in exchange for payment.
+
+License Compliance Checklist
+
+The following is a checklist for LGPL compliance when linking against the FFmpeg libraries. It is not the only way to comply with the license, but we think it is the easiest. There are also a few items that are not really related to LGPL compliance but are good ideas anyway.
+
+You are not obliged by the LGPL to follow this list, but consult a copyright lawyer if you choose not to. If you end up violating the LGPL, you will likely end up on our shame list and/or get sued by us.
+
+Compile FFmpeg without &quot;&ndash;&ndash;enable&ndash;gpl&quot; and without &quot;&ndash;&ndash;enable&ndash;nonfree&quot;.
+Use dynamic linking (on windows, this means linking to dlls) for linking with FFmpeg libraries.
+Distribute the source code of FFmpeg, no matter if you modified it or not.
+Make sure the source code corresponds exactly to the library binaries you are distributing.
+Run the command &quot;svn diff . libswscale &gt; changes.diff&quot; in the root directory of the FFmpeg source code to create a file with only the changes.
+Explain how you compiled FFmpeg, for example the configure line, in a text file added to the root directory of the source code.
+Use tarball or a zip file for distributing the source code.
+Host the FFmpeg source code on the same webserver as the binary you are distributing.
+Add &quot;This software uses code of &lt;a href=http://ffmpeg.org&gt;FFmpeg&lt;/a&gt; licensed under the &lt;a href=http://www.gnu.org/licenses/old&ndash;licenses/lgpl&ndash;2.1.html&gt;LGPLv2.1&lt;/a&gt; and its source can be downloaded &lt;a href=link_to_your_sources&gt;here&lt;/a&gt;&quot; to every page in your website where there is a download link to your application.
+Mention &quot;This software uses libraries from the FFmpeg project under the LGPLv2.1&quot; in your program &quot;about box&quot;.
+Mention in your EULA that your program uses FFmpeg under the LGPLv2.1.
+If your EULA claims ownership over the code, you have to explicitly mention that you do not own FFmpeg, and where the relevant owners can be found.
+Remove any prohibition of reverse engineering from your EULA.
+Apply the same changes to all translations of your EULA.
+Do not misspell FFmpeg (two capitals F and lowercase &quot;mpeg&quot;).
+Do not rename FFmpeg dlls to some obfuscated name, but adding a suffix or prefix is fine (renaming &quot;avcodec.dll&quot; to &quot;MyProgDec.dll&quot; is not fine, but to &quot;avcodec&ndash;MyProg.dll&quot; is).
+Go through all the items again for any LGPL external library you compiled into FFmpeg (for example LAME).
+Make sure your program is not using any GPL libraries (notably libx264).
+Trademark
+
+FFmpeg is a trademark of Fabrice Bellard, originator of the FFmpeg project.
+
+Patent Mini&ndash;FAQ
+
+A lot of legal questions surrounding patents arise when discussing multimedia technology. This mini&ndash;FAQ attempts to address these issues. Note that much of this discussion is based on precedent, or what has happened in the past under similar circumstances. Very little consideration is given to what could happen. If you use your imagination, you can visualize any dire scenario and cease doing any productive work.
+
+Q: Does FFmpeg use patented algorithms? 
+A: We do not know, we are not lawyers so we are not qualified to answer this. Also we have never read patents to implement any part of FFmpeg, so even if we were qualified we could not answer it as we do not know what is patented. Furthermore the sheer number of software patents makes it impossible to read them all so no one (lawyer or not) could answer such a question with a definite no, those who do lie. What we do know is that various standards FFmpeg supports contain vague hints that any conforming implementation might be subject to some patent rights in some jurisdictions, examples for such statements are: 
+For H.264:
+
+ITU draws attention to the possibility that the practice or implementation of this Recommendation may involve the use of a claimed Intellectual Property Right. ITU takes no position concerning the evidence, validity or applicability of claimed Intellectual Property Rights, whether asserted by ITU members or others outside of the Recommendation development process.
+
+And for MPEG&ndash;4:
+
+The user&prime;s attention is called to the possibility that, for some of the processes specified in this part of ISO/IEC 14496, conformance with this specification may require use of an invention covered by patent rights. By publication of this part of ISO/IEC 14496, no position is taken with respect to the validity of this claim or of any patent rights in connection therewith.
+
+Q: Is it safe to use such patented algorithms? 
+A: Patent laws vary wildly between jurisdictions, and in many countries patents on algorithms are not recognized. Plus the use of patents to prevent the usage of a format or codec on a specific operating system or together with specific other software might violate antitrust laws. So whether you are safe or not depends on where you live and how judges interpret the law in your jurisdiction.
+
+Q: Bottom line: Should I be worried about patent issues if I use FFmpeg? 
+A: Are you a private user working with FFmpeg for your own personal purposes? If so, there is remarkably little reason to be concerned. Are you using FFmpeg in a commercial software product? Read on to the next question...
+
+Q: Is it perfectly alright to incorporate the whole FFmpeg core into my own commercial product? 
+A: You might have a problem here. There have been cases where companies have used FFmpeg in their products. These companies found out that once you start trying to make money from patented technologies, the owners of the patents will come after their licensing fees. Notably, MPEG LA is vigilant and diligent about collecting for MPEG&ndash;related technologies.
+</pre><!-- license-text -->
+</td></tr><!-- same-license -->
+
+
+
+</table>
+</body></html>

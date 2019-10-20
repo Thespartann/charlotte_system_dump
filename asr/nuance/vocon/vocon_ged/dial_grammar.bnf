@@ -1,0 +1,83 @@
+﻿#BNF+EMV2.1;
+!grammar dial_grammar;
+!start <Wakeup>;
+!start <Dial>;
+!start <Dial_Special_Num>;
+!start <Contact>;
+!start <Dial_Confirm>;
+!start <Answer_Confirm>;
+!start <Hang_Up>;
+!start <Select_Num>;
+!start <Open_Google_Now>;
+!start <Find_Phone>;
+!slot <wakeup_word>;
+!slot <contacts>;
+
+<Wakeup>:<wakeup_word>;
+<Dial>:[<Wakeup>]<W_Dial>;
+<Dial_Special_Num>:[<Wakeup>]<W_Dial_Special_Num>;
+<Contact>:[<Wakeup>]<W_Contact>;
+<Dial_Confirm>:[<Wakeup>]<W_Dial_Confirm>;
+<Answer_Confirm>:[<Wakeup>]<W_Answer_Confirm>;
+<Hang_Up>:[<Wakeup>]<W_Hang_Up>;
+<Select_Num>:[<Wakeup>]<W_Select_Num>;
+<Open_Google_Now>:[<Wakeup>]<W_Open_Google_Now>;
+<Find_Phone>:[<Wakeup>]<W_Find_Phone>;
+
+<W_Dial>:<W_Dial_1>|<W_Dial_2>;
+<W_Dial_1>:<contacts> [<Number_Type>] <Dial_Action_1>;
+<W_Dial_2>:<Dial_Action_2>;
+<W_Dial_Special_Num>:<Special_Num> <Dial_Action_1>;
+<W_Contact>:<contacts>;
+<W_Dial_Confirm>:<Ok> | <Cancel>;
+<W_Answer_Confirm>:<Answer> | <Reject>;
+<W_Hang_Up>: <Reject>;
+<W_Select_Num>:<Select_1> | <Select_2> | <Select_3> | <Select_4> | <Select_5> | <Select_6>;
+<W_Open_Google_Now>: google now (öffnen | aufmachen | wählen | suchen);
+<W_Find_Phone>:wo bist du;
+
+<Dial_Action_1> : anrufen | wählen ;
+<Dial_Action_2> : wahlwiederholung | (erneut | nochmal) (wählen | anrufen);
+<Number_Type> : !tag(Number_Type_TAG,   
+                  zu hause !id(1) |
+                  privat !id(1) |
+                  auf dem festnetz !id(1) |
+                  im büro !id(2) |
+                  auf der arbeit !id(2) |
+                  mobil   !id(3) |
+                  auf dem handy   !id(3)
+                  );
+<Action_Filter> : beim;
+<Special_Num> : !tag(Special_Num,
+					1 1 2 | 1 1 0
+					);
+<Ok> : !tag(Ok,
+			ja | ok | genau | richtig | wählen | anrufen
+			);
+<Cancel> : !tag(Cancel,
+				abbrechen | abbruch
+				);
+<Answer> : !tag(Answer,
+			[anruf | telefonat] (annehmen | beantworten | akzeptieren) | antworten
+			);
+<Reject> : !tag(Reject,
+				[anruf | telefonat] ( nicht annehmen | nicht beantworten | ablehnen) 
+				);
+<Select_1> : !tag(Select_1,
+				 (der |  die | das) erste | nummer eins
+				);
+<Select_2> : !tag(Select_2,
+				 (der | die | das) zweite | nummer zwei
+				);
+<Select_3> : !tag(Select_3,
+				 (der | die | das) dritte | nummer drei
+				);
+<Select_4> : !tag(Select_4,
+				 (der | die | das) vierte | nummer vier
+				);
+<Select_5> : !tag(Select_5,
+				 (der | die | das) fünfte | nummer fünf
+				);
+<Select_6> : !tag(Select_6,
+				 (der | die | das) sechste | nummer sechs
+				);

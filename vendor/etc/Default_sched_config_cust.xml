@@ -1,0 +1,146 @@
+<?xml version="3.0" encoding="utf-8"?>
+<policy version="3.0">
+    <version>3.0</version>
+    <log_open>0</log_open>
+    <enable>1</enable>
+    <SOC>970</SOC>
+
+    <game_list size='4'>  <!-- 所有白名单的包名-surface名对应表  surfaceflinger 游戏SDK  hwsched 都需要读取该白名单 !-->
+        <game id="0">
+            <package_name>default</package_name>
+            <surface_name>default</surface_name>
+            <FPS_detect_profile>0</FPS_detect_profile>
+            <temp_control_profile>0</temp_control_profile>
+            <fps_list>20 25 30 35 40 45 50 55 60</fps_list>
+            <sched_tunable_profile> 0 </sched_tunable_profile>
+        </game>
+        <game id="1">
+            <package_name>com.tencent.tmgp.cf</package_name>
+            <surface_name>SurfaceView - com.tencent.tmgp.cf/com.tencent.tmgp.cf.AFMainActivity#0</surface_name>
+            <FPS_detect_profile>0</FPS_detect_profile>
+            <temp_control_profile>0</temp_control_profile>
+            <fps_list>30 40 60</fps_list>
+            <sched_tunable_profile> 0 </sched_tunable_profile>
+        </game>
+        <game id="2">
+            <package_name>com.tencent.tmgp.sgame</package_name>
+            <surface_name>SurfaceView - com.tencent.tmgp.sgame/com.tencent.tmgp.sgame.SGameActivity#0</surface_name>
+            <FPS_detect_profile>0</FPS_detect_profile>
+            <temp_control_profile>0</temp_control_profile>
+            <fps_list>30 60</fps_list>
+            <sched_tunable_profile> 1 </sched_tunable_profile>
+        </game>
+        <game id="3">
+            <package_name>com.t2ksports.nba2k18and</package_name>
+            <surface_name>com.t2ksports.nba2k18and/com.t2ksports.nba2k18and.gameactivity#0</surface_name>
+            <FPS_detect_profile>0</FPS_detect_profile>
+            <temp_control_profile>0</temp_control_profile>
+            <fps_list>30 60</fps_list>
+            <sched_tunable_profile> 0 </sched_tunable_profile>
+        </game>
+   </game_list>
+
+    <sched_tunables>
+        <default_sched_tunable  para_size="17"> <!--//平台default参数-->
+            <para name="E_IDX_BOOST_DELAY" > 2000 </para>
+            <para name="E_IDX_BOOST_TIMEOUT"> 8000000 </para>
+            <para name="E_IDX_FPS_MIN_LOSS"> 3 </para>
+            <para name="E_IDX_FPS_MAX_LOSS"> 8 </para>
+            <para name="E_IDX_MARGIN_MIN"> -2000 </para>
+            <para name="E_IDX_FRAMES_UPDATE_PERFER"> 30 </para>
+            <para name="E_IDX_DECAY_FACTOR"> 9 </para>
+            <para name="E_IDX_ACT_DETECT_THRES"> 2 </para>
+            <para name="E_IDX_KEY_DETECT_THRES"> 10 </para>
+            <para name="E_IDX_MAX_ACT_THREADS"> 10 </para>
+            <para name="E_IDX_KEY_RESERVED_NUM"> 3 </para>
+            <para name="E_IDX_SUPER_CHECK_THRES"> 85 </para>
+            <para name="E_IDX_SUPER_CHECK_EN_COUNT"> 5 </para>
+            <para name="E_IDX_SUPER_CHECK_DIS_COUNT"> 5 </para>
+            <para name="E_IDX_OVERLOAD_LOWER_THRES"> 80 </para>
+            <para name="E_IDX_OVERLOAD_UPPER_THRES"> 85 </para>
+            <para name="E_IDX_BOOST_THREAD_START"> 1 </para>
+        </default_sched_tunable>
+        <specific_sched_tunable_list size = "2"><!--//增量参数-->
+            <sched_tunable id="0" para_size="0"><!--//非白名单游戏增量参数-->
+            </sched_tunable>
+            <sched_tunable id="1" para_size="1">
+                <para name="E_IDX_MARGIN_MIN"> 1000 </para>
+            </sched_tunable>
+        </specific_sched_tunable_list>
+    </sched_tunables>
+
+
+    <FPS_detector_list size="2">  <!--//FPS预测参数!-->
+        <FPS_detect id="0">
+            <algorithm id="0" para_size="5">
+                <para name="window_size">150</para>
+                <para name="mean_filter">10</para>
+                <para name="up_abnormal_offset">5.5</para>
+                <para name="down_abnormal_offset">3</para>
+                <para name="high-11">-1</para>
+            </algorithm>
+        </FPS_detect>
+        <FPS_detect id="1">
+            <algorithm id="0" para_size="40">
+                <para name="window_size">150</para>
+                <para name="mean_filter">10</para>
+                <para name="up_abnormal_offset">5.5</para>
+                <para name="down_abnormal_offset">3</para>
+                <para name="low-0">-0.00099582</para>
+                <para name="low-1">-0.02589126</para>
+                <para name="low-2">0</para>
+                <para name="low-3">1.03737649</para>
+                <para name="low-4">0.00372356</para>
+                <para name="low-5">-0.06819512</para>
+                <para name="low-6">0</para>
+                <para name="low-7">1.03879694</para>
+                <para name="low-8">0.79942494</para>
+                <para name="low-9">0.39971247</para>
+                <para name="low-10">0</para>
+                <para name="low-11">-38.57182219</para>
+                <para name="median-0">0.011</para>
+                <para name="median-1">0</para>
+                <para name="median-2">0</para>
+                <para name="median-3">-1</para>
+                <para name="median-4">0.024332</para>
+                <para name="median-5">-0.001187</para>
+                <para name="median-6">0</para>
+                <para name="median-7">-1.4332</para>
+                <para name="median-8">0.0000275</para>
+                <para name="median-9">-0.3476</para>
+                <para name="median-10">0</para>
+                <para name="median-11">0.9997</para>
+                <para name="high-0">0</para>
+                <para name="high-1">0</para>
+                <para name="high-2">0.000000245114625</para>
+                <para name="high-3">-7.14531644</para>
+                <para name="high-4">0</para>
+                <para name="high-5">0</para>
+                <para name="high-6">0.000000138465513</para>
+                <para name="high-7">-3.60129879</para>
+                <para name="high-8">0.011</para>
+                <para name="high-9">0</para>
+                <para name="high-10">0</para>
+                <para name="high-11">-1</para>
+            </algorithm>
+        </FPS_detect>
+    </FPS_detector_list>  <!--//FPS预测参数!-->
+
+    <temp_control_list size="2"> <!--//温控参数!-->
+        <temp_control id="0" size="5">
+            <para name="max_temp">52</para>
+            <para name="pow_warm_up_normal">2850000</para><!--750mA*3800mv!-->
+            <para name="pow_warm_up_fast">3040000</para><!--800mA*3800mv!-->
+            <para name="window_size">3</para>
+            <para name="strategy_enable">0</para>
+        </temp_control>
+        <temp_control id="1" size="5">
+            <para name="max_temp">52</para>
+            <para name="pow_warm_up_normal">2850000</para><!--750mA*3800mv!-->
+            <para name="pow_warm_up_fast">3040000</para><!--800mA*3800mv!-->
+            <para name="window_size">3</para>
+            <para name="strategy_enable">0</para>
+        </temp_control>
+    </temp_control_list> <!--//温控参数!-->
+
+</policy>

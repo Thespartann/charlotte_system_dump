@@ -1,0 +1,20 @@
+# 2018-08-09 16:29:44.0
+ro.config.alarm_alert=Aegean_Sea.ogg
+# 2018-08-15 12:11:46.0
+ro.config.hw_ecclist_nocard=+120,+122
+# 2018-07-04 16:06:26.0
+ro.config.hw_ecclist_withcard=+112
+# 2018-07-04 16:06:26.0
+ro.config.hw_globalEcc=false
+# 2018-07-04 16:06:27.0
+ro.config.hw_nlp=com.huawei.lbs
+# 2018-07-04 16:06:27.0
+ro.config.hw_updateCotaPara=true
+# 2018-07-04 16:06:27.0
+ro.config.hw_vassistant_honor=true
+# 2018-07-04 16:06:27.0
+ro.config.ringtone=Honor.ogg
+# 2018-07-04 16:06:26.0
+ro.config.ringtone2=Huawei_Tune_Living.ogg
+# 2019-04-28 12:13:33.0
+ro.config.support_doubletap_pay=true

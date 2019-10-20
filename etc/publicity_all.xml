@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packageList>
+	<packageInfo author="华为" feature="提供智能定位服务。" package="com.huawei.lbs" label="com.huawei.lbs">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="为用户提供快捷操作、能快速进入主屏幕、回退、最近任务。" package="com.huawei.android.FloatTasks" label="com.huawei.android.FloatTasks">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="亮点智能推介，向用户推荐和说明EMUI的特性，提升用户的使用体验。" package="com.huawei.tips" label="com.huawei.tips">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="华为一键热点分享应用，不同华为设备打开蓝牙并登录相同华为帐户后，无需输入密码即可共享 WLAN 热点。" package="com.huawei.android.instantonline" label="com.huawei.android.instantonline">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="华为智慧视觉应用提供扫码、翻译、购物、卡路里、识物功能。" package="com.huawei.scanner" label="com.huawei.scanner">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="提供系统升级服务。" package="com.huawei.android.hwouc" label="com.huawei.android.hwouc">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="支持穿戴设备互联，提供如下功能：扫描发现穿戴设备后进行连接提醒、下载或打开对应应用、穿戴设备间因为距离太远断开连接后快速重新连接。" package="com.huawei.iconnect" label="com.huawei.iconnect">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="无线投屏支持屏幕镜像无线投射功能。" package="com.huawei.android.mirrorshare" label="com.huawei.android.mirrorshare">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="智慧决策引擎，用于华为智能助手服务推荐，EMUI 亮点特性推荐以及智能通知管理。" package="com.huawei.recsys" label="com.huawei.recsys">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="玩机技巧为您提供手机亮点功能介绍以及用户手册，让您快速了解手机精彩功能，并获取操作技巧和使用指导。" package="com.huawei.android.tips" label="com.huawei.android.tips">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="通用数据管理服务：具备数据计算，数据脱敏和加密，生命周期管理，端云协同等功能，提供更高效、安全、可靠和一致性的用户体验。" package="com.huawei.nb.service" label="com.huawei.nb.service">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="Huawei HiAI Engine" package="com.huawei.hiai" label="com.huawei.hiai">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="一键将旧手机中的联系人、照片、视频、应用等数据迁移至华为新手机，轻松换机。" package="com.hicloud.android.clone" label="com.hicloud.android.clone">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="云文件夹，在您使用“精品推荐”文件夹的应用时，给您提供 TOP 级精品应用的推荐服务，让您轻松发现实用、好用的手机应用。" package="com.huawei.hifolder" label="com.huawei.hifolder">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为扩展的Framework基础框架能力，用于对接部分华为自研应用。" package="com.huawei.android.hsf" label="com.huawei.android.hsf">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为移动服务（Huawei Mobile Services）为华为帐号、华为支付、华为推送等华为自有应用和第三方应用提供基础服务，包括登录帐号、支付、接收消息等。" package="com.huawei.hwid" label="com.huawei.hwid">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为音乐是提供音乐播放的应用，提供音乐播放功能，可浏览、播放、下载在线音乐内容，并支持低功耗播放、自定义歌单、全局搜索、听歌识曲、水母动效。" package="com.android.mediacenter" label="com.android.mediacenter">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为音乐是提供音乐播放的应用，提供音乐播放功能，可浏览、播放、音乐内容，并支持低功耗播放、自定义歌单、水母动效。" package="com.android.mediacenter" label="com.android.mediacenter">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="应用市场是华为官方的安卓应用查询和下载平台。" package="com.huawei.appmarket" label="com.huawei.appmarket">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="您可以通过备份应用备份设备上的个人数据 (如联系人、信息、通话记录)、应用数据或多媒体数据，避免系统升级、刷机后数据丢失。" package="com.huawei.KoBackup" label="com.huawei.KoBackup">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="您可以通过文件管理器管理手机上的文件，如：图片、视频、音频、文档、APP等。" package="com.huawei.hidisk" label="com.huawei.hidisk">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="您可以通过文件管理器管理手机上的文件，如：图片、视频、音频、文档、APP等。" package="com.huawei.hidisk" label="com.huawei.hidisk">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="“服务”是华为为消费者提供的售后服务的软件，包括产品使用指导、智能检测、寄修服务、预约服务、服务网点查询、热线电话查询等多项服务，旨在为亿万华为终端用户提供优质、省心、快捷的服务。" package="com.huawei.phoneservice" label="com.huawei.phoneservice">
+	</packageInfo>
+	<packageInfo label="com.huawei.hicard" package="com.huawei.hicard" feature="HiCard APP是华为公司提供的卡片框架服务，该服务定义了卡片的属性、展示规则以及布局显示等内容。它可以支持多个不同的卡片服务提供方接入，也支持多个应用端订阅和查询卡片，统一规范获取卡片与渲染效果，提升更好的用户体验。卡片服务提供方及卡片展示方具体对应如下：     1.卡片服务提供方:HAG开放服务、玩机技巧、HiSuggestion     2.卡片展示方：智能助手、HiSuggestion、HiVision     (以上每一个卡片展示方均可以展示三个卡片提供方所提供的卡片)" author="华为终端有限公司">
+	</packageInfo>
+	<packageInfo label="com.huawei.intelligent" package="com.huawei.intelligent" feature="情景智能特性旨在将用户零散的信息集中管理起来，并在合适的时间进行提醒。" author="华为终端有限公司">
+	</packageInfo>
+	<packageInfo label="com.huawei.search" package="com.huawei.search" feature="智慧搜索APP是华为公司提供的搜索工具，可以搜索本地内容、华为云服务资源及第三方合作伙伴资源，并结合您的搜索习惯，提供相关智能搜索服务。     1. 本地应用的内容：搜索已安装的应用、联系人、设置项、短信、邮件、备忘录、本地文件（如word文档等）。     2. 在线资源：华为应用市场应用、直达服务卡片、华为音乐、华为视频、书籍、主题及网页内容等。" author="华为软件技术有限公司">
+	</packageInfo>
+	<packageInfo label="com.huawei.trustagent" package="com.huawei.trustagent" feature="提供蓝牙智能解锁功能。" author="华为终端有限公司">
+	</packageInfo>
+	<packageInfo use-permission=" " package="com.android.keyguard" label="华为杂志锁屏" feature="管理系统预置的杂志锁屏内容、提供锁屏壁纸、并提供更新和订阅功能。" author="华为终端有限公司">
+	</packageInfo>
+	<packageInfo use-permission="华为原生相机，包含专业相机（依赖硬件）、滤镜模式、笑脸抓拍等功能。" author="华为终端有限公司" feature="华为原生相机，包含专业相机、滤镜模式、笑脸抓拍等功能。" package="com.huawei.camera" label="com.huawei.camera">
+	</packageInfo>
+	<packageInfo use-permission="华为原生镜子应用。" author="华为终端有限公司" feature="华为原生镜子应用。" package="com.android.hwmirror" label="com.android.hwmirror">
+	</packageInfo>
+</packageList>

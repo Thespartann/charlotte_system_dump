@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <!--2018-07-09 16:57:07.0-->
+  <string custom_certify_picture="/system/emui/china/media/certify_infor.png"/>
+  <!--2018-07-10 16:48:49.0-->
+  <string default_input_method="com.baidu.input_huawei/.ImeService"/>
+  <!--2018-06-14 18:50:20.0-->
+  <string enable_get_location="com.huawei.parentcontrol;com.huawei.hidisk"/>
+  <!--2018-07-20 14:19:13.0-->
+  <string hw_customized_networkType="CA:4G+"/>
+  <!--2018-06-14 18:50:20.0-->
+  <string hw_theme_support_hwid="true"/>
+  <!--2018-06-14 18:50:20.0-->
+  <string hw_theme_support_pay="true"/>
+  <!--2018-06-14 18:50:20.0-->
+  <integer is_show_google="0"/>
+  <!--2018-06-14 18:50:20.0-->
+  <string roamingBrokerSequenceList="CTExcel,45431,46003|CTExcel,45431,45400"/>
+  <!--2018-06-14 18:50:20.0-->
+  <string settings.global.hw_RemindWifiToPdp="true"/>
+  <!--2018-06-14 18:50:20.0-->
+  <integer settings.global.mobile_data="1"/>
+  <!--2018-08-27 20:45:58.0-->
+  <string settings.global.private_dns_default_mode="off"/>
+  <!--2018-06-14 18:50:20.0-->
+  <integer settings.system.androidBeam="0" reset="only_factory"/>
+  <!--2018-06-14 18:50:20.0-->
+  <string specIccidRBSeqList="45400:8985231" reset="true"/>
+  <!--2019-06-17 19:46:35.0-->
+  <string white_languages="en_US,ar_EG,de_DE,bs_BA,es_ES,uk_UA,fr_FR,pt_PT,ru_RU,zh_CN,zh_TW,zh_HK,es_US,cs_CZ,da_DK,el_GR,hu_HU,pt_BR,it_IT,ja_JP,lt_LT,lv_LV,bg_BG,nb_NO,pl_PL,ro_RO,et_EE,sk_SK,sr_Latn,sv_SE,tr_TR,th_TH,fi_FI,in_ID,mk_MK,sl_SI,ms_MY,vi_VN,hr_HR,nl_NL,ca_ES,hi_IN,ko_KR,en_GB,iw_IL,eu_ES,gl_ES,bo_CN,ka_GE,az_AZ,uz_UZ,km_KH,si_LK,ur_PK,kk_KZ,lo_LA,be_BY,bn_BD,ne_NP,tl_PH,jv_Latn,ug_CN"/>
+</resources>

@@ -1,0 +1,6 @@
+service lmkd /system/bin/lmkd
+    class core
+    group root readproc
+    critical
+    socket lmkd seqpacket 0660 system system
+    writepid /dev/cpuset/system-background/tasks /dev/stune/system-background/tasks /dev/blkio/system-background/tasks

@@ -1,0 +1,85 @@
+#BNF+EMV2.1;
+!grammar phrasespotter_grammar;
+!start <PreDefine_Wakeup>;
+!start <UserDefine_Wakeup>;
+!start <Wakeup>;
+!start <Dial>;
+!start <Dial_Special_Num>;
+!start <Contact>;
+!start <Dial_Confirm>;
+!start <Select_Num>;
+!start <Hang_Up>;
+!start <Open_Google_Now>;
+!start <Find_Phone>;
+!slot <wuw_usd>;
+!slot <usw_wuw_usd>;
+!slot <contacts>;
+
+<PreDefine_Wakeup>:!tag(wuw, Ok Emy)|!tag(usw_wuw, "usw_okayemmy")|!tag(anti_wuw,Ok <...>|<...> Emy);
+<UserDefine_Wakeup>:<wuw_usd>|<usw_wuw_usd>|!tag(anti_wuw,<...>);
+<Wakeup>:<wuw_usd>;
+<Dial>:[<Wakeup>]<W_Dial>;
+<Dial_Special_Num>:[<Wakeup>]<W_Dial_Special_Num>;
+<Contact>:[<Wakeup>]<W_Contact>;
+<Dial_Confirm>:[<Wakeup>]<W_Dial_Confirm>;
+<Select_Num>:[<Wakeup>]<W_Select_Num>;
+<Hang_Up>:[<Wakeup>]<W_Hang_Up>;
+<Open_Google_Now>:[<Wakeup>]<W_Open_Google_Now>;
+<Find_Phone>:[<Wakeup>]<W_Find_Phone>;
+
+<W_Dial>:<W_Dial_1>|<W_Dial_2>;
+<W_Dial_1>:<Dial_Action_1> [<contacts> [[<Action_Filter>] <Number_Type>] ["Number"]];
+<W_Dial_2>:<Dial_Action_2>;
+<W_Dial_Special_Num>:<Dial_Action_1> <Special_Num>;
+<W_Contact>:<contacts>;
+<W_Dial_Confirm>:<Ok> | <Cancel>;
+<W_Select_Num>:<Select_1> | <Select_2> | <Select_3> | <Select_4> | <Select_5> | <Select_6>;
+<W_Hang_Up>:<Cancel>;
+<W_Open_Google_Now>:"Open Google Now";
+<W_Find_Phone>:"Where are you";
+
+<Dial_Action_1> : Call | Dial | Phone;
+<Dial_Action_2> : Redial;
+<Number_Type> : !tag(Number_Type_TAG,   
+					"Home"   !id(1) |
+					"Office" !id(2) |
+					"Mobile" !id(3)
+					);
+<Action_Filter> : at;
+<Special_Num> : !tag(Special_Num,
+					9 1 1|
+					1 1 2|
+					1 1 0|
+					1 1 8|
+					1 1 9
+					);
+<Ok> : !tag(Ok,
+			Call
+			);
+<Cancel> : !tag(Cancel,
+				Cancel
+				);
+<Select_1> : !tag(Select_1,
+				 ([the] first) |
+				 "Number one"
+				);
+<Select_2> : !tag(Select_2,
+				 ([the] second) |
+				 "Number two"
+				);
+<Select_3> : !tag(Select_3,
+				 ([the] third) |
+				 "Number three"
+				);
+<Select_4> : !tag(Select_4,
+				 ([the] fourth) |
+				 "Number four"
+				);
+<Select_5> : !tag(Select_5,
+				 ([the] fifth) |
+				 "Number five"
+				);
+<Select_6> : !tag(Select_6,
+				 ([the] sixth) |
+				 "Number six"
+				);

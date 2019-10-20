@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- config value
+ * Copyright (C) 2018 Huawei Inc.
+ *
+-->
+<config>
+    <res_type name="cpu_little" id="0">
+        <value_bound>
+            <min>509000</min>
+            <max>1844000</max>
+        </value_bound>
+        <base>
+            <min>509000</min>
+            <max>1844000</max>
+        </base>
+    </res_type>
+    <res_type name="cpu_big" id="2">
+        <value_bound>
+            <min>682000</min>
+            <max>2362000</max>
+        </value_bound>
+        <base>
+            <min>682000</min>
+            <max>2362000</max>
+        </base>
+    </res_type>
+    <res_type name="gpu" id="3">
+        <value_bound>
+            <min>103750000</min>
+            <max>767000000</max>
+        </value_bound>
+        <base>
+            <min>237143000</min>
+            <max>767000000</max>
+        </base>
+    </res_type>
+    <res_type name="ddr" id="4">
+        <value_bound>
+            <min>415000000</min>
+        </value_bound>
+        <base>
+            <min>415000000</min>
+        </base>
+    </res_type>
+    <res_type name="ipa" id="6">
+        <ipa_type name="ipa_power" id="0">
+            <value_bound>
+                <min>0</min>
+                <max>10000</max>
+            </value_bound>
+            <base>
+                <value>4500</value>
+            </base>
+        </ipa_type>
+        <ipa_type name="ipa_switch_temp" id="1">
+            <value_bound>
+                <min>0</min>
+                <max>100000</max>
+            </value_bound>
+            <base>
+                <value>55000</value>
+            </base>
+        </ipa_type>
+    </res_type>
+    <res_type name="cpu_migration" id="9">
+        <base_level>
+            <group name="top_app" id="0">
+                <value>0</value>
+            </group>
+            <group name="boost" id="1">
+                <value>0</value>
+            </group>
+            <group name="foreground" id="2">
+                <value>0</value>
+            </group>
+            <group name="root" id="3">
+                <value>0</value>
+            </group>
+            <group name="background" id="4">
+                <value>0</value>
+            </group>
+            <group name="system_background" id="5">
+                <value>0</value>
+            </group>
+            <group name="system_background" id="6">
+                <value>0</value>
+            </group>
+            <group name="vip" id="7">
+                <value>0</value>
+            </group>
+        </base_level>
+        <level_mapping>
+            <level name="extreme_power_saving" id="-20">
+                <eas_value>1</eas_value>
+                <eas_boost>0</eas_boost>
+            </level>
+            <level name="power_saving" id="-10">
+                <eas_value>50</eas_value>
+                <eas_boost>0</eas_boost>
+            </level>
+            <level name="normal" id="0">
+                <eas_value>100</eas_value>
+                <eas_boost>0</eas_boost>
+            </level>
+            <level name="performance_level_0" id="10">
+                <eas_value>106</eas_value>
+                <eas_boost>0</eas_boost>
+            </level>
+            <level name="performance_level_5" id="20">
+                <eas_value>114</eas_value>
+                <eas_boost>0</eas_boost>
+            </level>
+            <level name="performance_level_10" id="30">
+                <eas_value>121</eas_value>
+                <eas_boost>0</eas_boost>
+            </level>
+            <level name="high_performance" id="40">
+                <eas_value>140</eas_value>
+                <eas_boost>0</eas_boost>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="latency_cpu" id="10">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="100">
+                <value>77359400</value>
+            </level>
+            <level name="level_value" id="110">
+                <value>0</value>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="latency_gpu" id="11">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="100">
+                <value>demand</value>
+            </level>
+            <level name="level_value" id="110">
+                <value>always_on</value>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="latency_ddr" id="12">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="100">
+                <value>2</value>
+            </level>
+            <level name="level_value" id="110">
+                <value>0</value>
+            </level>
+            <level name="level_value" id="120">
+                <value>1</value>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="io_speed" id="13">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="100">
+                <value>0</value>
+            </level>
+            <level name="level_value" id="110">
+                <value>290714</value>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="mem_lat_target_ratio_cpu_l" id="14">
+        <value_bound>
+            <min>0</min>
+            <max>2000</max>
+        </value_bound>
+        <base>
+            <value>100</value>
+        </base>
+    </res_type>
+    <res_type name="mem_lat_target_ratio_cpu_m" id="15">
+        <value_bound>
+            <min>0</min>
+            <max>2000</max>
+        </value_bound>
+        <base>
+            <value>100</value>
+        </base>
+    </res_type>
+    <res_type name="mem_lat_target_ratio_cpu_b" id="16">
+        <value_bound>
+            <min>0</min>
+            <max>2000</max>
+        </value_bound>
+        <base>
+            <value>100</value>
+        </base>
+    </res_type>
+    <res_type name="mem_lat_polling_interval_cpu_l" id="17">
+        <value_bound>
+            <min>10</min>
+            <max>500</max>
+        </value_bound>
+        <base>
+            <value>50</value>
+        </base>
+    </res_type>
+    <res_type name="mem_lat_polling_interval_cpu_m" id="18">
+        <value_bound>
+            <min>10</min>
+            <max>500</max>
+        </value_bound>
+        <base>
+            <value>50</value>
+        </base>
+    </res_type>
+    <res_type name="mem_lat_polling_interval_cpu_b" id="19">
+        <value_bound>
+            <min>10</min>
+            <max>500</max>
+        </value_bound>
+        <base>
+            <value>50</value>
+        </base>
+    </res_type>
+    <res_type name="load_cpu_l" id="20">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="90">
+                <go_hispeed_load>95</go_hispeed_load>
+                <hispeed_freq>1402000</hispeed_freq>
+                <target_loads>75 1018000:85 1210000:90 1556000:98</target_loads>
+            </level>
+            <level name="level_value" id="100">
+                <go_hispeed_load>95</go_hispeed_load>
+                <hispeed_freq>1402000</hispeed_freq>
+                <target_loads>75 1018000:85 1210000:80 1402000:90 1556000:90 1690000:95</target_loads>
+            </level>
+            <level name="level_value" id="110">
+              <go_hispeed_load>98</go_hispeed_load>
+              <hispeed_freq>1556000</hispeed_freq>
+              <target_loads>75 1556000:90 1690000:95 1844000:100</target_loads>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="load_cpu_b" id="22">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="90">
+                <go_hispeed_load>90</go_hispeed_load>
+                <hispeed_freq>1364000</hispeed_freq>
+                <target_loads>80 1364000:90 1498000:95</target_loads>
+            </level>
+            <level name="level_value" id="100">
+                <go_hispeed_load>90</go_hispeed_load>
+                <hispeed_freq>1364000</hispeed_freq>
+                <target_loads>80 1364000:75 1498000:85 1652000:95</target_loads>
+            </level>
+            <level name="level_value" id="110">
+                <go_hispeed_load>75</go_hispeed_load>
+                <hispeed_freq>1364000</hispeed_freq>
+                <target_loads>70 1364000:75 1498000:80 1652000:90</target_loads>
+            </level>
+            <level name="level_value" id="120">
+                <go_hispeed_load>75</go_hispeed_load>
+                <hispeed_freq>1364000</hispeed_freq>
+                <target_loads>70 1364000:75 1498000:80 1652000:85</target_loads>
+            </level>
+            <level name="level_value" id="130">
+                <go_hispeed_load>60</go_hispeed_load>
+                <hispeed_freq>1498000</hispeed_freq>
+                <target_loads>60 1364000:75 1498000:80</target_loads>
+            </level>
+            <level name="level_value" id="140">
+                <go_hispeed_load>60</go_hispeed_load>
+                <hispeed_freq>1652000</hispeed_freq>
+                <target_loads>60 1498000:65 1652000:75 2093000:90</target_loads>
+            </level>
+            <level name="level_value" id="150">
+                <go_hispeed_load>60</go_hispeed_load>
+                <hispeed_freq>1863000</hispeed_freq>
+                <target_loads>60 1863000:75 2362000:95</target_loads>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="delay_up_cpu_l" id="24">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="90">
+               <above_hispeed_delay>39000 1690000:59000</above_hispeed_delay>
+            </level>
+            <level name="level_value" id="100">
+                <above_hispeed_delay>19000</above_hispeed_delay>
+            </level>
+            <level name="level_value" id="110">
+              <above_hispeed_delay>16000</above_hispeed_delay>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="delay_up_cpu_b" id="26">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="90">
+                <above_hispeed_delay>39000 1498000:79000 1652000:39000</above_hispeed_delay>
+            </level>
+            <level name="level_value" id="100">
+                <above_hispeed_delay>39000 1498000:79000 1652000:19000</above_hispeed_delay>
+            </level>
+            <level name="level_value" id="110">
+                <above_hispeed_delay>39000 1652000:19000</above_hispeed_delay>
+            </level>
+            <level name="level_value" id="120">
+                <above_hispeed_delay>39000 1364000:19000</above_hispeed_delay>
+            </level>
+            <level name="level_value" id="150">
+                <above_hispeed_delay>19000</above_hispeed_delay>
+            </level>
+            <level name="level_value" id="160">
+                <above_hispeed_delay>10000</above_hispeed_delay>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="delay_down_cpu_l" id="28">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="90">
+                <min_sample_time>80000 1402000:59000 1556000:19000</min_sample_time>
+            </level>
+            <level name="level_value" id="100">
+                <min_sample_time>80000</min_sample_time>
+            </level>
+            <level name="level_value" id="110">
+              <min_sample_time>85000</min_sample_time>
+            </level>
+        </level_mapping>
+    </res_type>
+    <res_type name="delay_down_cpu_b" id="30">
+        <base_level>
+            <value>100</value>
+        </base_level>
+        <level_mapping>
+            <level name="level_value" id="90">
+                <min_sample_time>80000 1364000:39000 1652000:19000</min_sample_time>
+            </level>
+            <level name="level_value" id="100">
+                <min_sample_time>80000</min_sample_time>
+            </level>
+            <level name="level_value" id="110">
+              <min_sample_time>85000</min_sample_time>
+            </level>
+        </level_mapping>
+    </res_type>
+</config>

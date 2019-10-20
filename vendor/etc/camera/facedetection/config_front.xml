@@ -1,0 +1,194 @@
+<DetectorConfig>
+
+  <!-- Specifies the max resolution of photos that this detector can accept
+  (longSide x shortSide)
+  -->
+  <longSide>1920</longSide>
+  <shortSide>1300</shortSide>
+
+  <!-- Run the face features detection? -->
+  <runFFD>1</runFFD>
+
+	<!-- If set, the library performs detections on tracking, treating faces and images as part of a time sequence (video frame). -->
+  <trackingMode>1</trackingMode>
+  <!-- If set, the library performs face detection using FotoNation's Advanced Hardware Face Detector.-->
+  <hardwareDetector>1</hardwareDetector>
+  <!-- 0:reserved memory, 1:system memory -->
+  <hardwareMemoryType>0</hardwareMemoryType>
+  <!-- If set, the library will perform tracking only on luminance only, ignoring the color channels.-->
+  <luminanceOnly>0</luminanceOnly>
+  <!-- If set, the library will cycle the orientation of the
+    image by 90 degrees when no faces are detected. The
+    change of the image orientation is performed after
+    a number of frames from the last update. This allows
+    the detection of faces oriented at angles not covered by the
+    @ref FNFD_DETECTOR_CFG::lockAngles "lock angles sequence".
+    If this flag is activated, the orientation of the input
+    image (FNFD_IMAGE::rollAngle) is ignored.-->
+  <autoOrientation>0</autoOrientation>
+
+	<!-- Specifies the minimum face size in pixels the library should try to detect.
+
+	The allowed range for this parameter is <i>[12, min(image.width, image.height)]</i>.
+	If zero is specified (default) then it will try to find faces down until 14x14 pixels.
+
+	Increasing this value will result in better performance.
+	UINT32
+	-->
+	<minFaceSize>38</minFaceSize>
+
+    <!-- Specifies the maximum face size in pixels the library should try to detect.
+
+      The allowed range for this parameter is <i>[minFaceSize, min(image.width, image.height)]</i>.
+      If zero is specified (default) then it will try to find faces up to <i>min(image.width, image.height)</i>.
+
+      Decreasing this value will result in better performance.
+	  UINT32
+    -->
+	<maxFaceSize>0</maxFaceSize>
+
+	<!--Maximum number of faces that will be detected and tracked.
+	UINT32
+	-->
+	<maxFaceCount>10</maxFaceCount>
+
+	<!--An array that specifies the angles on which faces will be detected.
+	See enum ::FNFD_OOP_ANGLE for possible values.
+	-->
+	<lockAngles>
+	</lockAngles>
+
+	<!--When ::FNFD_TRACKING_MODE flag is set, this array specifies the angles on which face re-detection (tracking) will be performed.
+	See enum ::FNFD_OOP_ANGLE for possible values.
+	This array must end with ::FNFD_OOP_END for FNFD_ANGLE::outOfPlane field.
+
+	@note
+	- One angles must not be specified multiple times.
+	-->
+	<trackAngles>
+	</trackAngles>
+	<!-- Specifies the level of smoothing of the face tracking output.
+	Smoothing prevents abrupt changes of the reported face position and size
+	that can happen because of random factors.
+	The valid values are in range [0 ... 100], where:
+	- 0 - no smoothing;
+	- 50 - medium smoothing;
+	- 100 - highest smoothing.
+	@note
+      Recommended value: 50 (in tracking mode)
+	UINT32
+	-->
+    <smoothing>50</smoothing>
+
+	<!--Specifies the number of frames to keep reporting a face after it is lost.
+	- 0 - the library uses a default number of frames.
+	- -1 - do not keep reporting the face after it is lost.
+	- 1...30 - keep the lost face for specified number of frames more.
+	INT32
+	-->
+    <keepFacesOverMoreFrames>0</keepFacesOverMoreFrames>
+
+	<!--Boost Detection Rate(DR) vs False Positives(FP).
+	Accepted values [-10;+10]
+	- -10 - very strict, low DR, low FP
+	-   0 - default
+	-  10 - very relaxed, high DR, high FP
+
+    INT32
+    -->
+    <boostDRvsFP>4</boostDRvsFP>
+
+
+    <!--Boost Detection Rate(DR) vs speed.
+    Accepted values [-10;+10]
+    - -10 - hight speed, low DR
+    -   0 - default
+    -  10 - low speed, high DR
+
+    @note
+    This parameter is used only when the flag
+    ::FNFD_HARDWARE_DETECTOR is not set.
+
+    INT32
+    -->
+    <boostDRvsSPEED>0</boostDRvsSPEED>
+
+    <!--A value between 1 and 10 specifying the number of frames needed to
+    complete the face locking. If 0 is specified (default) the library
+    chooses a default number of frames.
+
+    This parameter allows to spread the processing time required for face
+    locking across several frames. In turn, if more frames are specified,
+    then more processing time is allocated for tracking algorithm. In other
+    words, increasing this parameter decreases the priority of locking
+    and increases the priority of tracking.
+
+    @note
+    This parameter is used only when the flag
+    ::FNFD_HARDWARE_DETECTOR is not set.
+
+    UINT32-->
+    <framesPerLock>0</framesPerLock>
+
+    <!--The horizontal percentage of the frame size that is considered
+    by the library during locking (detection of the new face). It does not
+    affect the tracking area (following a detected face).
+
+    @note
+    This parameter is used only when the flag
+    ::FNFD_HARDWARE_DETECTOR is not set.
+
+    UINT32-->
+    <lockAreaPercentW>0</lockAreaPercentW>
+
+    <!--The vertical percentage of the frame size.
+    Same meaning as for FNFD_DETECTOR_CFG::lockAreaPercentW.
+
+    @note
+    This parameter is used only when the flag
+    ::FNFD_HARDWARE_DETECTOR is not set.
+
+    UINT32-->
+    <lockAreaPercentH>0</lockAreaPercentH>
+
+</DetectorConfig>
+
+<EyesSmileConfig>
+    <!-- 1 or 0 flags -->
+    <disableEyes>0</disableEyes>
+    <disableBlink>1</disableBlink>
+    <disableSmile>0</disableSmile>
+    <enableHiQEyes>0</enableHiQEyes>
+</EyesSmileConfig>
+
+<FaceFeaturesDetectionConfig>
+
+     <!-- Specifies the level of smoothing of the FFD tracking output.
+      Smoothing prevents abrupt changes of the reported face feature points position
+      that can happen because of random factors.
+      The valid values are in range [0 ... 100], where:
+        - 0 - no smoothing;
+        - 50 - medium smoothing;
+        - 100 - highest smoothing.
+      @note
+        Recommended value: 50 (in tracking mode)
+    -->
+    <smoothing>50</smoothing>
+
+    <!-- 0 or 1 flag
+    If set, the library detects a subset of basic feature points.
+      @note
+        This flag is only valid if tracking mode is set.
+    -->
+    <basicMode>1</basicMode>
+</FaceFeaturesDetectionConfig>
+
+<!-- List of points used when evaluating the FFD solution
+    Example:
+    <FFDEvalPoints>
+        <point number="0"> </point>
+        <point number="3"> </point>
+    </FFDEvalPoints>
+-->
+<FFDEvalPoints>
+</FFDEvalPoints>

@@ -1,0 +1,4 @@
+libOpenCL.so
+libai_client.so
+
+libteec.so

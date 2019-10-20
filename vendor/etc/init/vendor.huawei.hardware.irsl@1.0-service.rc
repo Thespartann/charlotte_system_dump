@@ -1,0 +1,4 @@
+service irsl-hal-1-0 /vendor/bin/hw/vendor.huawei.hardware.irsl@1.0-service
+    class hal
+    user system
+    group system media

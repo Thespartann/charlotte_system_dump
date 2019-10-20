@@ -1,0 +1,209 @@
+{
+    "version": "1.0.0",
+    "ignoreStackList": {
+        "Level1": [
+            "libc.so",
+            "libclang_rt.asan-arm-android.so",
+            "libclang_rt.asan-aarch64-android.so",
+            "libc_fdleak_debug.so",
+            "unknown",
+            "watchdog",
+            "kthread"
+        ],
+        "Level2": [
+            "libart.so",
+            "__switch_to",
+            "dump_backtrace",
+            "show_stack",
+            "dump_stack",
+            "java.lang.Object",
+            "java.lang.Thread",
+            "java.lang.reflect.Method.invoke",
+            "com.android.internal.os.ZygoteInit.main",
+            "com.android.internal.os.RuntimeInit"
+        ],
+        "Level3": [
+            "android.os.BinderProxy",
+            "panic",
+            "android.os.SystemClock.sleep"
+        ]
+    },
+    "file1":{
+        "dir":"/data/system/dropbox/",
+        "pattern":".*?app_anr@[0-9]{13}\\.txt(\\.gz)?",
+        "featureid":690100100,
+        "command":[
+            {"name":"BasicParam", "source":"Process: (.*)", "s_process":"Process: (.*)"},
+            {"name":"BasicParam", "source":"PID: (.*)", "s_pid":"PID: (.*)"},
+            {"name":"BasicParam", "source":"Flags: (.*)", "s_flag":"Flags: (.*)"},
+            {"name":"BasicParam", "source":"Package: (.*)", "s_package":"Package: (.*)", "s_appversion":"^Package: [^\\(]*\\((.*)\\)$"},
+            {"name":"BasicParam", "source":"APPVMTYPE: (.*)", "s_appvmtype":"APPVMTYPE: (.*)"},
+            {"name":"BasicParam", "source":"SYSVMTYPE: (.*)", "s_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"name":"BasicParam", "source":"Foreground: (.*)", "s_foreground":"Foreground: (.*)"},
+            {"name":"BasicParam", "source":"Activity: (.*)", "s_activity":"Activity: (.*)"},
+            {"name":"BasicParam", "source":"Subject: (.*)", "s_subject":"Subject: (.*)", "s_block_reason":"(?<=Subject: ).*?(?=\\(.*)"},
+            {"name":"BasicParam", "source":"Lifetime: (.*)", "s_lifetime":"Lifetime: (.*)"},
+            {"name":"BasicParam", "source":"Build: (.*)", "s_build":"Build: (.*)"},
+            {"name":"BasicParam", "source":"\\d+% \\d+/([^:]+):.*", "s_topcpu":"\\d+% \\d+/([^:]+):.*"},
+            {"name":"BasicParam", "source":"(\\d[\\.0-9]+)% TOTAL:", "s_totalcpu":"(\\d[\\.0-9]+)% TOTAL:", "s_iowait":".* TOTAL: .* (\\d[\\.0-9]+)% iowait .*"},
+            {"name":"MatchCmdline", "source":"Cmd line: &@&s_process", "s_block_cmdline":"Cmd line: &@&s_process"},
+            {"name":"MainCallTrace", "depend":"MatchCmdline", "source":"\"main\" prio=", "begin":"^\\s+at (.*)\\(.*", "end":"^\\s+at (.*)\\(.*", "paramset":["s_f1", "s_f2","s_f3"]}
+        ]
+    },
+    "file2":{
+        "dir":"/data/system/dropbox/",
+        "pattern":".*?app_crash@[0-9]{13}\\.txt(\\.gz)?",
+        "featureid":690100101,
+        "command":[
+            {"name":"BasicParam", "source":"Process: (.*)", "s_process":"Process: (.*)"},
+            {"name":"BasicParam", "source":"PID: (.*)", "s_pid":"PID: (.*)"},
+            {"name":"BasicParam", "source":"Flags: (.*)", "s_flag":"Flags: (.*)"},
+            {"name":"BasicParam", "source":"Package: (.*)", "s_package":"Package: (.*)", "s_appversion":"^Package: [^\\(]*\\((.*)\\)$"},
+            {"name":"BasicParam", "source":"SYSVMTYPE: (.*)", "s_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"name":"BasicParam", "source":"APPVMTYPE: (.*)", "s_appvmtype":"APPVMTYPE: (.*)"},
+            {"name":"BasicParam", "source":"Foreground: (.*)", "s_foreground":"Foreground: (.*)"},
+            {"name":"BasicParam", "source":"Lifetime: (.*)", "s_lifetime":"Lifetime: (.*)"},
+            {"name":"BasicParam", "source":"Build: (.*)", "s_build":"Build: (.*)"},
+            {"name":"BasicParam", "source":"\\d+% \\d+/([^:]+):.*", "s_topcpu":"\\d+% \\d+/([^:]+):.*"},
+            {"name":"MainCallTrace", "source":"^\\s+at (.*)\\(.*", "begin":"^\\s+at (.*)\\(.*", "end":"^\\s+at (.*)\\(.*", "paramset":["s_f1","s_f2","s_f3"]},
+            {"name":"BasicParam", "source":"(?<=-)mainthread|(?<=-)loghandler", "s_mainthread":"(?<=-)mainthread|(?<=-)loghandler"}
+        ]
+    },
+    "file3":{
+        "dir":"/data/system/dropbox/",
+        "pattern":".*?(TOMBSTONE|native_crash)@[0-9]{13}\\.txt(\\.gz)?",
+        "featureid":690100102,
+        "command":[
+            {"name":"BasicParam", "source":">>> (.*) <<<", "s_process":">>> (.*) <<<"},
+            {"name":"BasicParam", "source":"Build: (.*)", "s_build":"Build: (.*)"},
+            {"name":"BasicParam", "source":"Flags: (.*)", "s_flag":"Flags: (.*)"},
+            {"name":"BasicParam", "source":"Package: (.*)", "s_package":"Package: (.*)", "s_appversion":"^Package: [^\\(]*\\((.*)\\)$"},
+            {"name":"BasicParam", "source":"Hardware: (.*)", "s_hardware":"Hardware: (.*)"},
+            {"name":"BasicParam", "source":"Revision: (.*)", "Revision":"Revision: (.*)"},
+            {"name":"BasicParam", "source":"Bootloader: (.*)", "Revision":"Bootloader: (.*)"},
+            {"name":"BasicParam", "source":"Radio: (.*)", "Revision":"Radio: (.*)"},
+            {"name":"BasicParam", "source":"Kernel: (.*)", "Revision":"s_kernelinfo: (.*)"},
+            {"name":"BasicParam", "source":"Build fingerprint: (.*)", "s_androidvision":"(?<=/)(\\w+:\\d)(?=\\.|/)"},
+            {"name":"BasicParam", "source":"SYSVMTYPE: (.*)", "s_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"name":"BasicParam", "source":"APPVMTYPE: (.*)", "s_appvmtype":"APPVMTYPE: (.*)"},
+            {"name":"BasicParam", "source":"pid: (.*)", "s_pid":"PID: (.*)"},
+            {"name":"BasicParam", "source":"signal ([0-9]+).*", "s_sig":"signal ([0-9]+).*"},
+            {"name":"ExceptionReason", "source":"Cause: (.*)", "s_cause_reason":"Cause: (.*)"},
+            {"name":"MainCallTrace", "source":"backtrace:", "begin":"\\s+#\\d+", "end":"\\s+#\\d+", "paramset":["s_f1", "s_f2","s_f3"]}
+        ]
+    },
+    "file4":{
+        "dir":"/data/system/dropbox/",
+        "pattern":".*?(system_server_crash|SYSTEM_TOMBSTONE)@[0-9]{13}\\.txt(\\.gz)?",
+        "featureid":690100000,
+        "command":[
+            {"name":"BasicParam", "source":"(?<=Process:\\s)(.*)", "s_process":"(?<=Process:\\s)(.*)"},
+            {"name":"BasicParam", "source":"(?<=>>>\\s)(.*)+(?=<<<)", "s_process":"(?<=>>>\\s)(.*)+(?=<<<)"},
+            {"name":"BasicParam", "source":"SYSVMTYPE: (.*)", "s_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"name":"BasicParam", "source":"signal ([0-9]+).*","s_sigmsg":"signal ([0-9]+).*"},
+            {"name":"MainCallTrace", "source":"^\\s+at (.*)\\(.*", "begin":"^\\s+at (.*)\\(.*", "end":"^\\s+at (.*)\\(.*", "paramset":["s_f1", "s_f2","s_f3"]},
+            {"name":"BasicParam", "source":"(?<=server\\.)[a-zA-Z]+(?=\\.)", "s_module":"(?<=server\\.)[a-zA-Z]+(?=\\.)"}
+        ]
+    },
+    "file5":{
+        "dir":"/data/system/dropbox/",
+        "pattern":".*?system_server_watchdog@@[0-9]{13}\\.txt(\\.gz)?",
+        "featureid":690100001,
+        "command":[
+            {"name":"BasicParam", "source":"Process: (.*)", "s_process":"Process: (.*)"},
+            {"name":"BasicParam", "source":"Subject: Blocked in monitor(.*)", "s_subject":"Subject: Blocked in monitor(.*)", "s_block_reason":"(?<=Blocked in monitor )(.*)(?=on foreground thread \\()", "s_thread":"(?<=\\()(.*?)(?=\\))"},
+            {"name":"BasicParam", "source":"Subject: Blocked in handler on(.*)", "s_subject":"Subject: Blocked in handler on(.*)", "s_block_reason":"(?<=Blocked in handler on )(.*)(?=\\()", "s_thread":"(?<=\\()(.*?)(?=\\))"},
+            {"name":"BasicParam", "source":"Build: (.*)", "s_build":"Build: (.*)"},
+            {"name":"BasicParam", "source":"SYSVMTYPE: (.*)", "s_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"name":"BasicParam", "source":"\\d+% \\d+/([^:]+):.*", "s_topcpu":"\\d+% \\d+/([^:]+):.*"},
+            {"name":"BasicParam", "source":"(\\d[\\.0-9]+)% TOTAL:", "s_totalcpu":"(\\d[\\.0-9]+)% TOTAL:", "s_iowait":".* TOTAL: .* (\\d[\\.0-9]+)% iowait .*"},
+            {"name":"BasicParam", "source":"----- pid (.*) at", "s_pid":"----- pid (.*) at"},
+            {"name":"MatchCmdline", "source":"Cmd line: &@&s_process", "s_block_cmdline":"Cmd line: &@&s_process"},
+            {"name":"MainCallTrace", "depend":"MatchCmdline", "source":"- waiting to lock <", "s_waiting_to_lock":"(?<=- waiting to lock <)(.*)(?=>)", "s_held_tid":"(?<=held by thread )(.*)", "s_f1":"^.*?- waiting to lock.*?$"},
+            {"name":"BlockTrace", "depend":"MainCallTrace", "source":"prio=\\d tid=&@&s_held_tid ", "s_binder_name":"(?<=\")(.*)(?=\")"},
+            {"name":"BlockStack", "depend":"BlockTrace", "source":"prio=\\d tid=&@&s_held_tid ", "begin":"^\\s+at (.*)\\(.*", "end":"- locked <&@&s_waiting_to_lock>", "paramset":["s_f2"]},
+            {"name":"BinderStack", "depend":"BlockStack", "source":"binder transactions", "s_bind":""},
+            {"name":"BinderThread", "depend":"BinderStack", "source":"(?=&@&s_binder_name\\))", "s_f3":"^.*?&@&s_binder_name.*?$"}
+        ]
+    },
+    "file6":{
+        "dir":"/data/hisi_logs/",
+        "pattern":"\\d{14}-\\d{8}/ap_log/last_kmsg",
+        "featureid":690100002,
+        "command":[
+            {"name":"BasicParam", "source":"PC is at ([^\\+ ]+.*)", "s_f1":"PC is at ([^\\+ ]+.*)"},
+            {"name":"BasicParam", "source":"cpu[0-9],(.*)]", "s_pname":"cpu[0-9],(.*)]"},
+            {"name":"ExceptionReason", "source":"(.*)success to kill system_server(.*)", "s_system_killed_reason":"(.*)success to kill system_server(.*)"},
+            {"name":"ExceptionReason", "source":"(.*)binder is full (.*)", "s_binder_is_full":"(.*)binder is full (.*)"}
+        ]
+    },
+    "file7":{
+        "dir":"/data/hisi_logs/",
+        "pattern":"\\d{14}-\\d{8}/ap_log/dmesg-ramoops-0",
+        "featureid":690100003,
+        "command":[                        
+            {"name":"BasicParam", "source":"(?<=\\,)[a-zA-Z]+(?=\\](?=Kernel panic - not syncing: Fatal exception))","s_pname":"(?<=\\,)[a-zA-Z]+(?=\\](?=Kernel panic - not syncing: Fatal exception))"},
+            {"name":"BasicParam", "source":".*?kernel BUG at\\s(.*)","s_cause":".*?kernel BUG at\\s(.*)"},
+            {"name":"BasicParam", "source":".*?Unable to handle kernel paging request at virtual address\\s(.*)","s_cause":".*?Unable to handle kernel paging request at virtual address\\s(.*)"},
+            {"name":"BasicParam", "source":".*?Unable to handle kernel NULL pointer\\s(.*)","s_cause":".*?Unable to handle kernel NULL pointer\\s(.*)"},
+            {"name":"BasicParam", "source":".*?unrecoverable failure\\s(.*)","s_cause":".*?unrecoverable failure\\s(.*)"},
+            {"name":"BasicParam", "source":"(?<=\\,)(.*)(?=\\,[a-zA-Z]+\\]Kernel panic - not syncing: Fatal exception)","s_cpu":"(?<=\\,)(.*)(?=\\,[a-zA-Z]+\\]Kernel panic - not syncing: Fatal exception)"},
+            {"name":"BasicParam", "source":"(?<=pid\\:)(.*)(?=\\,cpu\\d\\,[a-zA-Z]+\\]Kernel panic - not syncing: Fatal exception)","s_pid":"(?<=pid\\:)(.*)(?=\\,cpu\\d\\,[a-zA-Z]+\\]Kernel panic - not syncing: Fatal exception)"},            
+            {"name":"BasicParam", "source":"(?<=(.*)cpu)\\d(?=\\,(.*)\\[err_code=\\d+\\])","s_cpu":"(?<=(.*)cpu)\\d(?=\\,(.*)\\[err_code=\\d+\\])"},
+            {"name":"BasicParam", "source":"(?<=(.*)pid\\:)\\d+(?=\\,(.*)err_code)","s_pid":"(?<=(.*)pid\\:)\\d+(?=\\,(.*)err_code)"},
+            {"name":"MainCallTrace", "depend":"BasicParam", "source":"Call trace:", "begin":"(?<=(?<=&@&s_pname\\])+(\\[\\<(.*)\\>\\]))+(.*)", "end":"(?<=(?<=&@&s_pname\\])+(\\[\\<(.*)\\>\\]))+(.*)", "paramset":["s_f1", "s_f2","s_f3"]}
+        ]
+    },
+    "file8":{
+        "dir":"/log/reliability/boot_fail/uploading/",
+        "pattern":"bootfail_\\d{14}_0(x|X)(\\d|\\w){1,12}/bootFail_info.txt",
+        "featureid":690100500,
+        "command":[
+            {"name":"BasicParam", "source":"time:(.*)[\r\n]", "s_bootfailtime":"time:(.*)[\r\n]"},
+            {"name":"BasicParam", "source":"bootFailErrno:(0x.*)[\r\n]", "s_bootfailErrno":"bootFailErrno:(0x.*)[\r\n]"},
+            {"name":"BasicParam", "source":"boot_stage:(0x.*)[\r\n]", "s_bootErrStage":"boot_stage:(0x.*)[\r\n]"},
+            {"name":"BasicParam", "source":"isSystemRooted:(.*)[\r\n]", "s_rootOrNot":"isSystemRooted:(.*)[\r\n]"},
+            {"name":"BasicParam", "source":"isUserPerceptible:(.*)[\r\n]", "s_isUserPerceptible":"isUserPerceptible:(.*)[\r\n]"},
+            {"name":"BasicParam", "source":"starttime:(.*)[\r\n]", "s_starttime":"starttime:(.*)[\r\n]"},
+            {"name":"BasicParam", "source":"endtime:(.*)[\r\n]", "s_endtime":"endtime:(.*)[\r\n]"}
+        ]
+    },
+    "file9":{
+        "dir":"/log/reliability/boot_fail/uploading/",
+        "pattern":"bootfail_\\d{14}_0(x|X)(\\d|\\w){1,12}/recovery_info.txt",
+        "featureid":690100501,
+        "command":[
+            {"name":"BasicParam", "source":"rcvMethod:(\\d+)[\r\n]", "s_rcvMethod":"rcvMethod:(\\d+)[\r\n]"},
+            {"name":"BasicParam", "source":"rcvResult:(\\d+)[\r\n]", "s_rcvResult":"rcvResult:(\\d+)[\r\n]"},
+            {"name":"BasicParam", "source":"selfHealChain:(.*)[\r\n]", "s_selfHealChain":"selfHealChain:(.*)[\r\n]"}
+        ]
+    },
+    "file10":{
+        "dir":"/data/hisi_logs/",
+        "pattern":"\\d{14}-\\d{8}/cp_log/reset.log",
+        "featureid":690100200,
+        "command":[
+            {"name":"BasicParam", "source":"brief:(.*)", "s_f1":"brief:(.*)"},
+            {"name":"BasicParam", "source":"task_name:(.*)", "s_f2":"task_name:(.*)"},
+            {"name":"BasicParam", "source":"modid:(.*)", "s_f3":"modid:(.*)"}
+        ]
+    },
+    "file11":{
+        "dir":"/data/hisi_logs/running_trace/teeos_logs/",
+        "pattern":"last_teemsg",
+        "featureid":690100203,
+        "command":[
+            {"name":"BasicParam", "source":"Crash Task Name = (.*)", "s_pname":"Crash Task Name = (.*)"},
+            {"name":"BasicParam", "source":"========== The PC (.*)", "s_f1":"========== The PC (.*)"}
+        ]
+    },
+    "file12":{
+        "dir":"/data/log/reliability/xcollie",
+        "pattern":"xcollie@\\d{1,13}.log",
+        "featureid":690100403,
+        "command":[
+            {"name":"BasicParam", "source":">>> (.*) <<<", "s_pname":">>> (.*) <<<"},
+            {"name":"MainCallTrace", "source":"\\s*#\\d+ pc \\d+(.*)", "begin":"\\s*#\\d+ pc \\d+(.*)", "end":"\\s*#\\d+ pc \\d+(.*)", "paramset":["s_f1", "s_f2","s_f3"]}
+        ]
+    }
+}
